@@ -1,0 +1,156 @@
+.main {
+  position: relative;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-div{
+  display: flex;
+  margin-bottom:240px;
+  
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  padding: 20px;
+  width: 80%; /* Adjusted for responsiveness */
+  max-width: 1200px;
+  border-radius: 12px;
+  text-align: center; /* Center align text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Elegant font */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.second-div{
+  display: flex;
+  flex-direction:row;
+  margin-bottom:100px;
+  justify-content: center;
+  animation: fadeIn 5s ease-out;
+}
+
+
+
+.skills-div{
+
+  border:1px solid aqua;
+  box-shadow:5px 5px 20px aqua;
+  height:360px;
+  margin:40px;
+  padding:16px;
+  border-radius:20px;
+  width:fit-content; 
+  background-color: black;
+  width:800px;
+  align-items: center;
+}
+
+.skills{
+  padding:8px;
+  border-radius:8px;
+  margin-bottom:8px;
+  font-weight:bold;
+
+}
+
+.skills:hover{
+  box-shadow:5px 5px 20px aqua;
+}
+
+
+.contacts{
+  
+  border:1px solid aqua;
+  box-shadow:5px 5px 20px aqua;
+  height:fit-content;
+  margin:40px;
+  padding:16px;
+  border-radius:20px;
+  background-color: black;
+  height:360px;
+  display:flex;
+  flex-direction: column;
+  width:800px;
+  align-items:center;
+
+}
+
+
+
+.img-icon{
+  width:60px;
+  height:60px;
+  border-radius: 30px;
+  border:aqua 1px solid;
+  margin:30px 16px;
+}
+
+.contact-icon{
+  display: flex;
+  margin:4px;
+}
+
+.img-icon:hover{
+  box-shadow:0 0 20px aqua;
+}
+
+.contact-txt div{
+  padding:8px;
+
+  
+}
+
+.details{
+  font-weight: bold;
+  text-align: center;
+
+}
+.details-div{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+
+.details:hover{
+  color:aquamarine;
+}
+a:link{
+  color:red;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: verdana;
+  
+}
+a:hover{
+  color:red;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: verdana;
+  
+
+}
+a:visited{
+  color:aquamarine;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: verdana;
+  
+}

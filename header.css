@@ -1,0 +1,51 @@
+
+.header {
+  z-index:100;
+  position:fixed;
+  top:0px;
+  right:0;
+  left:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height:100px;
+  background-color: black;
+
+
+}
+.logo {
+  font-size: 40px;
+  font-family: verdana;
+  font-weight: bold;
+  width: 40%;
+  color:rgba(0, 110, 255, 0.466);
+  margin-left:16px;
+}
+
+
+.header div{
+  padding:8px;
+  color:rgba(238, 238, 238, 0.5);
+
+  
+}
+
+.header div:hover{
+  border-bottom:2px solid aqua;
+  color:white;
+  border-radius: 8px;
+ 
+}
+
+.sabin-bg{
+  height:500px;
+  width:700px;
+  object-fit:cover;
+  z-index:-1;
+  position:fixed;
+  right:0px;
+  bottom:0px;
+
+}
+

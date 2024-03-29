@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: verdana;
+}
+
+h1 {
+  color: aqua;
+  font-size: 2em; /* Larger font size */
+  margin-bottom: 0.5em; /* Reduced bottom margin */
+  transition:color 0.15s;
+  display: inline-block;
+}
+
+h1:hover{
+  color:white;
+
+}
+
+h2 {
+  color: #00b3b3; /* Aqua color for h2 */
+  font-size: 1.2em; /* Slightly increased font size */
+  margin: 0;
+}
+
+p {
+  color: #333; /* Dark gray color for p */
+  font-weight: bold;
+}
+
+
+.second-div{
+  display: flex;
+}
+
+.skills-div{
+  display: flex;
+  flex-direction:column;
+  padding:8px;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
