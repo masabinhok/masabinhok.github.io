@@ -1,0 +1,14 @@
+
+/* PROJECTS CSS */
+.projects-page
+{
+  position:absolute;
+  top:100px;
+  z-index:-1;
+}
+
+.projects{
+  display:flex;
+  justify-content: center;
+  
+}

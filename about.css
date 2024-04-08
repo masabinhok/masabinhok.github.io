@@ -1,0 +1,14 @@
+
+/* about CSS */
+.about-page
+{
+  position:absolute;
+  top:100px;
+  z-index:-1;
+}
+
+.about-me{
+  display:flex;
+  justify-content: center;
+  
+}

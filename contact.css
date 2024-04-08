@@ -1,0 +1,14 @@
+
+/* contacts CSS */
+.contact-page
+{
+  position:absolute;
+  top:100px;
+  z-index:-1;
+}
+
+.contact{
+  display:flex;
+  justify-content: center;
+  
+}
