@@ -1,14 +1,16 @@
-
-/* PROJECTS CSS */
-.projects-page
-{
-  position:absolute;
-  top:100px;
-  z-index:-1;
+.project-page{
+  width:100%;
+  height:2000px;
+  margin-top:80px;
+  background-color: rgb(190, 234, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.projects{
+.my-projects{
+  height:800px;
+  width:100%;
   display:flex;
-  justify-content: center;
-  
+  flex-direction: column;
 }

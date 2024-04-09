@@ -4,13 +4,28 @@ body {
   padding: 0;
   height: 100vh;
   background-position: center;
-  display: flex;
   justify-content: center;
   align-items: center;
-  color:black;
-  background:linear-gradient(to right, #298ed1, white);
+  color:white;
   
 }
+
+a{
+  text-decoration: none;
+  color:white;
+  font-weight:bold;
+  transition: color 0.15s;
+
+}
+
+
+a:hover 
+{
+  color:rgb(236, 230, 230);
+}
+
+
+
 
 /* Header CSS */
 .header {
@@ -19,13 +34,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #298ed1, #ffffff);
-  color: black;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  background: linear-gradient(to bottom, #298ed1, rgb(190, 234, 255));
+  color: white;
   height: 80px;
   top:0px;
-  
 }
 
 .header1 {
@@ -52,12 +64,10 @@ body {
 }
 
 .header2 div:hover {
-  color: rgb(56, 56, 56);
+  color:rgb(236, 230, 230);
 }
 
-.menu-icon {
-  display: none;
-}
+
 
 @media screen and (max-width: 600px) {
   .header2 {
@@ -74,33 +84,32 @@ body {
 
 /* Sidebar CSS */
 .sidebar {
-  z-index: 2;
   position: fixed;
   top: 0;
   right: -650px;
   width: 100%;
   transition: right 0.5s ease-in-out;
-  color: black;
-  
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   height: 80px;
-  padding: 16px;
+  padding: 20px;
   align-items: center;
-  background: linear-gradient(to bottom, #298ed1, #ffffff);
+  background: linear-gradient(to bottom, #298ed1, rgb(190, 234, 255));
+  font-size: 12px;
 }
 
-.sidebar div {
-  padding: 8px;
+.sidebar-item {
+  flex:1;
+  padding: 4px;
   transition: color 0.15s;
   cursor: pointer;
 }
 
 .sidebar div:hover {
-  color: gray;
+  color:rgb(236, 230, 230);
 }
 
 .sidebar-toggle-checkbox {
@@ -114,12 +123,20 @@ body {
 .sidebar-toggle-label2 {
   position: fixed;
   align-items: center;
-  font-size: 30px;
+  justify-content: center;
+  font-size: 20px;
   cursor: pointer;
   color: white;
   right: 16px;
+  top:45px;
   
 }
+
+.sidebar-toggle-label2:active{
+  color:rgb(236, 230, 230);
+
+}
+
 
 @media screen and (min-width: 600px) {
   .sidebar {
@@ -132,160 +149,174 @@ body {
 
 /* Footer CSS */
 .footer {
-  bottom: 0px;
-  background: linear-gradient(to top, #298ed1, #ffffff);
+  background: linear-gradient(to top,#298ed1, rgb(190, 234, 255));
   height: 80px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom:-4000px;
-  
-  
-}
-
-.row1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-h1 {
-  padding: 16px;
-  font-size: 24px;
-}
-
-.row1 img {
-  width: 30px;
-  height: 30px;
-  border-radius:20px;
-  box-shadow:-2px 2px 20px rgb(255, 255, 255);
-}
-
-.row1 img:hover {
-
-  box-shadow: 2px 2px 20px rgb(4, 206, 241);
-}
-
-
-
-/* home CSS */
-.home-page
-{
-  position:absolute;
-  top:100px;
-  z-index:-1;
-  max-width:1000px;
-  min-width:400px;
-  align-items: center;
-  
-}
-
-.home-div{
-  display:flex;
-  justify-content: center;
-  
-}
-
-
-a{
-  text-decoration: none;
+  margin-bottom:0px;
   color:white;
-  font-weight:bold;
-  transition: color 0.15s;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:center;
+  
+  
+}
 
+.footer div{
+  flex-shrink:1;
+  align-self: center;
+}
+
+@media screen and (max-width:600px){
+  .footer{
+    font-size: 12px;
+  }
 }
 
 
-a:hover 
-{
-  color:rgb(236, 230, 230);
-}
 
+.home-page{
+  width:100%;
+  height:2000px;
+  margin-top:80px;
+  background-color: rgb(190, 234, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 
 
 .intro{
+ 
+  width:80%;
+
+  height:800px;
   display:flex;
   flex-direction: row;
+  margin-top:80px;
+}
+
+
+.row1{
+  display:flex;
+  flex-direction: column;
+  flex:1;
+
+}
+
+.i-hi{
+  width:80%;
+  font-size:40px;
+  text-shadow: 2px 2px 10px rgb(255, 255, 255);
+
+}
+
+.i-name{
+  width:80%;
+  font-size:40px;
+  
+  text-shadow: 2px 2px 10px rgb(255, 255, 255);
+
+}
+
+.i-slogan{
+  width:80%;
+  font-size:20px;
+  text-shadow: 2px 2px 10px rgb(255, 255, 255);
+  
+}
+
+.row2{
+  display:flex;
+  flex-direction: column;
+  flex:1;
+  margin-top:220px;
+  text-align: center;
+  font-size:40px;
+}
+
+.icons{
   align-items: center;
-  margin:1em;
-  
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding:16px;
+}
+
+.fb, .git, .ig, .discord{
+width:60px;
+height:60px;
+border-radius: 100px;
+padding:16px;
+
+
+}
+
+.cse{
+  margin-top:80px;
   
 }
 
-.sabinimg{
-  width:300px;
-  height:300px;
-  object-fit: cover;
-  border-radius: 200px;
-  box-shadow:4px 4px 20px rgb(255, 255, 255);
-  margin:8px;
+
+@media screen and (max-width:600px) {
+  .intro{
+    flex-direction: column;
+    height:fit;
+  }
+.row1{
+  flex:0.25;
 }
 
-@media screen and (max-width:600px)
-{
-  .sabinimg{
-    display: none;
+.fb, .git, .ig, .discord{
+  width:20px;
+  height:20px;
+  border-radius: 100px;
+  padding:8px;
+  
+  
+  }
+  
+
+  .i-hi{
+    margin-top:0px;
+    font-size:20px;
+  }
+  .i-name{
+    font-size: 22px;
+    font-weight:bold;
+
+  }
+  .i-slogan{
+    font-size:14px;
+    
+  }
+
+  .row2{
+    margin-top:40px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+  }
+
+  .cse{
+    font-size:24px;
+  }
+
+  .campus{
+    font-size:14px;
+    
+  }
+  .humandada{
+    border:1px solid white;
+    border-radius:10000px;
+    width:200px;
+    height:160px;
+    object-fit:cover;
+    width:80%;
+    margin:auto;
+
   }
 }
 
-
-
-.describe
-{
-  display: flex;
-  flex-direction: column;
-  border-bottom:1px solid rgb(0, 204, 255);
-  height:860px;
-  justify-content: center;
-  max-height:1000px;
-  min-height:800px;
-
-}
-
-.sabinh1{
-  align-items: center;
-  color:rgb(25, 36, 41)
-}
-
-.sabinh3{
-  padding:16px;
-  margin-top:-36px;
-  color:rgb(7, 48, 87);
-}
-
-.sabinp{
-  padding:16px;
-  margin-top:-16px;
-  color:#012c49
-}
-
-.hiddenhead{
-  display:flex;
-  flex-direction: row;
-}
-
-.sabinhidden{
-  width:80px;
-  height:80px;
-  margin-top:20px;
-  object-fit: cover;
-  border-radius: 50px;
-  box-shadow:4px 4px 20px rgb(255, 255, 255);
-  
-}
-
-@media screen and (min-width:600px) {
-  .sabinhidden{
-    display: none;
-  }
-  
-}
-
-.headings{
-  display: flex;
-  flex-direction: column;
-
-}
