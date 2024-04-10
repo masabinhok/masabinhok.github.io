@@ -1,91 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Contact</title>
-  </head>
-  <body style="font-family: 'montserrat', sans serif">
-    <!-- header -->
-
-    <header class="header">
-      <div class="header1">erSabin.</div>
-      <div class="header2">
-        <a href="index.html"><div class="home">Home</div></a>
-        <a href="about.html"><div class="about-me">About me</div> </a>
-        <a href="projects.html"><div class="s-project">Projects</div></a>
-        <a href="contact.html"><div class="contact-me">Contact</div></a>
-      </div>
-    </header>
-
-    <!--sidebar -->
-
-    <input
-      type="checkbox"
-      id="sidebar-toggle"
-      class="sidebar-toggle-checkbox"
-    />
-
-    <div class="sidebar">
-      <a href="index.html"> <div class="s-menu">Home</div></a>
-      <a href="about.html"><div class="s-about">About Me</div></a>
-      <a href="projects.html"><div class="s-project">Projects</div></a>
-      <a href="contact.html"><div class="s-contact">Contacts</div></a>
-      <label for="sidebar-toggle" class="sidebar-toggle-label2">☰</label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabin Shrestha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <style>
+    body {
+      font-family: 'montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header1">erSabin.</div>
+    <div class="header2">
+      <div class="home">Home</div>
+      <div class="about-me">About me</div>
+      <div class="project">Projects</div>
+    <a href="#to-contact"> <div class="contact-me">Contact</div></a> 
     </div>
+  </header>
 
-    <!-- content -->
+  <!-- sidebar -->
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox" />
+  <div class="sidebar">
+    <div class="s-menu">Home</div>
+    <div class="s-about">About Me</div>
+    <div class="s-project">Projects</div>
+    <a href="#to-contact"> <div class="s-contact">Contacts</div></a>   
+    <label for="sidebar-toggle" class="sidebar-toggle-label2">☰</label>
+  </div>
 
+  <!-- content -->
   <main class="home-page">
-    <div class="intro">
-      <div class="row1">
-        <img class="humandada" src="wau.png">
-
-        
-      </div>
-    <div class="row2">
-      <div class="i-hi">
-        Gracious!
-      </div>
-      <div class="i-name">
-        I'm Sabin Shrestha.
-      </div>
-      <div class="i-slogan">
-        and what i do is art!
-      </div>
-      <div class="cse">
-        A COMPUTER ENGINEERING STUDENT
-      </div>
-      <div class="campus">
-        at PULCHOWK CAMPUS, LALITPUR
-      </div>
-      <div class="icons">
-        <div><img  class="fb" src="facebookk.png"></div>
-        <div><img class="ig" src="instagram.png"></div>
-        <div><img  class="git" src="github.png"></div>
-        <div><img class="discord" src="facebookk.png"></div>
+    <div class="intro-container">
+      <div class="intro">
+        <div class="row1">
+          <img class="humandada" src="wau.png">
+        </div>
+        <div class="row2">
+          <div class="i-hi">Gracious,</div>
+          <div class="i-name">I'm Sabin Shrestha.</div>
+          <div class="i-slogan">and what i do is art!</div>
+          <div class="cse">A COMPUTER ENGINEERING STUDENT</div>
+          <div class="campus">at PULCHOWK CAMPUS, LALITPUR</div>
+          <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100054620642788"><div><img class="fb" src="facebookk.png"></div></a>
+            <a href="https://www.instagram.com/masabinhok/"><div><img class="ig" src="instagram.png"></div></a>
+            <a href="https://github.com/masabinhok"><div><img class="git" src="github.png"></div></a>
+            <a href="https://discord.com/users/1189924455263248534"><div><img class="discord" src="discordd.jpg"></div></a>
+          </div>
+        </div>
       </div>
     </div>
 
-    </div>
+    <!-- contact -->
+    <main  class="contact-page">
+      <div id="to-contact" class="contact-name">&#183; Sabin Shrestha &#183;</div>
+      <div class="contact-title">CONTACT ME</div>
+      <div class="double-box">
+        <div class="lets-talk">
+          <div class="inquiry">LET'S HAVE A CONVO,</div>
+          <form onsubmit="clearInterval">
+            <div class="form-elements">
+              <input type="text" id="name" name="name" placeholder="What shall I call you in my world?" required>
+              <input type="email" id="email" name="email" placeholder="Your Email here (is it funny?)" required>
+              <input type="number" id="phone" name="number" placeholder="Can I code my way to your contacts?">
+              <textarea name="Send Message" id="message" id="send-message" placeholder="Dont be shy, write it down, click that button!" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="buttons">
+              <input class="submit-button" type="submit" name="submit" value="Send">
+              <input class="reset-button" type="reset" name="reset">
+            </div>
+          </form>
+        </div>
+        <div class="contact-details">
+          <div class="details">INITIATE TO CONNECT,</div>
+          <div class="info">
+            <div class="contact-message">Hello there! Thank you for visiting my portfolio website. I'm excited to hear from you. Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out. I'm always eager to connect with fellow creatives and potential clients. Drop me a message using the contact form below, and I'll get back to you as soon as possible. Looking forward to chatting with you!</div>
+            <div class="email">
+              <h3><EMAIL>E-mail</EMAIL></h3>
+              <span>sabin.shrestha.er@gmail.com</span>
+            </div>
+            <div class="number">
+              <h3><contact>Contact</contact></h3>
+              <span>+977-9848920281</span>
+            </div>
+            <div class="address">
+              <h3>Address</h3>
+              <a href="https://www.google.com/maps/@27.7002069,85.2871819,16z?entry=ttu">Bafal-13, Kathmandu, Nepal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </main>
 
-
-    <!-- footer  -->
-
-    <footer class="footer">
-      <div><a class="drop" href="contact.html">DROP A LINE!</a></div>
-      <div><a href="github.com/masabinhok">GITHUB</a></div>
-      <div><a href="https://www.instagram.com/masabinhok/">INSTRAGRAM</a></div>
-      <div><a href="https://www.facebook.com/profile.php?id=100054620642788">FACEBOOK</a></div>
-</footer> 
-  </body>
+  <!-- footer -->
+  <footer class="footer">
+    <div><a class="drop" href="contact.html">DROP A LINE!</a></div>
+    <div><a href="https://github.com/masabinhok">GITHUB</a></div>
+    <div><a href="https://www.instagram.com/masabinhok/">INSTRAGRAM</a></div>
+    <div><a href="https://www.facebook.com/profile.php?id=100054620642788">FACEBOOK</a></div>
+  </footer> 
+</body>
 </html>
