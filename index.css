@@ -229,7 +229,7 @@ a:hover {
 
 .fb,
 .git,
-.ig
+.ig, .discord
 {
   width: 30px;
   height: 30px;
@@ -242,12 +242,7 @@ box-shadow:4px 4px 10px white;
 border-radius:100px;
 }
 
-.discord{
-  width:30px;
-  height:30px;
-  object-fit: cover;
-  
-}
+
 .contact-message {
   margin-bottom: 20px;
 }
