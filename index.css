@@ -1,5 +1,5 @@
 /* General Styles */
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -139,122 +139,99 @@ a:hover {
 }
 
 /* Footer CSS */
-.footer{
+.footer {
   background: linear-gradient(to bottom, #eae9ec, rgb(230, 223, 223));
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  height:fit-content;
-  width:100%;
-  padding-top:8px;
-  padding-bottom:8px;
-  gap:4em;
+  height: fit-content;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  gap: 4em;
 }
 
-
-
-
-
-.footer-container{
+.footer-container {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  
-  
 }
 
-@media screen and (max-width:600px) {
-  .footer-container{
-    display:flex;
+@media screen and (max-width: 600px) {
+  .footer-container {
+    display: flex;
     flex-direction: column;
-    gap:none;
+    gap: none;
     align-items: start;
-
   }
 }
 
-
-.goodbye{
-  font-size:14px;
-  
+.goodbye {
+  font-size: 14px;
 }
 
-
-
-.footer-slogan{
-  font-size:16px;
-  font-weight:500;
-  
+.footer-slogan {
+  font-size: 16px;
+  font-weight: 500;
 }
-
-
 
 .footer-icons {
   display: flex;
   flex-direction: row;
-  margin-left:-8px;
-
-
-
+  margin-left: -8px;
 }
 
-.go-up{
+.go-up {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.up{
-  width:40px;
-  height:40px;
+.up {
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border-radius: 20px;
   cursor: pointer;
 }
 
-.go-up:hover{
+.go-up:hover {
   opacity: 0.75;
 }
 
-
-
-
 .fb,
 .git,
-.ig, .discord
-{
+.ig,
+.discord {
   width: 30px;
   height: 30px;
   border-radius: 80px;
   padding: 4px;
 }
 
-.footer-icons img:hover{
-opacity: 0.75;
-border-radius:100px;
+.footer-icons img:hover {
+  opacity: 0.75;
+  border-radius: 100px;
 }
 
-
-
-
-@media screen and (min-width:600px){
-  .footer{
-    gap:6em;
+@media screen and (min-width: 600px) {
+  .footer {
+    gap: 6em;
   }
-  .footer-container{
-    gap:6em;
+  .footer-container {
+    gap: 6em;
   }
 
-  .goodbye{
+  .goodbye {
     font-size: 18px;
     font-weight: 800;
   }
 
-  .footer-slogan{
-    font-size:18px;
-    font-weight:800;
+  .footer-slogan {
+    font-size: 18px;
+    font-weight: 800;
   }
 }
 
@@ -324,36 +301,28 @@ homepage */
 .icons {
   display: flex;
   flex-direction: row;
-  
 }
 
 .fb,
 .git,
-.ig, .discord
-{
+.ig,
+.discord {
   width: 30px;
   height: 30px;
   border-radius: 80px;
   padding: 16px;
 }
 
-.icons img:hover{
-opacity: 0.75;
+.icons img:hover {
+  opacity: 0.75;
 }
 
-
-
-
 @media screen and (max-width: 1200px) {
-
-
   .intro {
     flex-direction: column;
     height: fit;
     width: 100%;
   }
-
-
 
   .row1 {
     flex: 0.25;
@@ -404,9 +373,7 @@ opacity: 0.75;
     height: 280px;
     object-fit: cover;
     width: 80%;
-    margin-top:40px;
+    margin-top: 40px;
     border-radius: 400px;
   }
 }
-
-
