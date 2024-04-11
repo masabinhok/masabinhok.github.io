@@ -139,28 +139,127 @@ a:hover {
 }
 
 /* Footer CSS */
-.footer {
+.footer{
   background: linear-gradient(to bottom, #eae9ec, rgb(230, 223, 223));
-  height: 80px;
-  width: 100%;
-  margin-bottom: 0px;
-  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height:fit-content;
+  width:100%;
+  padding-top:8px;
+  padding-bottom:8px;
+  gap:4em;
+}
+
+
+
+
+
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  
+  
+}
+
+@media screen and (max-width:600px) {
+  .footer-container{
+    display:flex;
+    flex-direction: column;
+    gap:none;
+    align-items: start;
+
+  }
+}
+
+
+.goodbye{
+  font-size:14px;
+  
+}
+
+
+
+.footer-slogan{
+  font-size:16px;
+  font-weight:500;
+  
+}
+
+
+
+.footer-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  margin-left:-8px;
+
+
+
+}
+
+.go-up{
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.footer div {
-  flex-shrink: 1;
-  align-self: center;
+.up{
+  width:40px;
+  height:40px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-  .footer {
-    font-size: 12px;
+.go-up:hover{
+  opacity: 0.75;
+}
+
+
+
+
+.fb,
+.git,
+.ig, .discord
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 80px;
+  padding: 4px;
+}
+
+.footer-icons img:hover{
+opacity: 0.75;
+border-radius:100px;
+}
+
+
+
+
+@media screen and (min-width:600px){
+  .footer{
+    gap:6em;
+  }
+  .footer-container{
+    gap:6em;
+  }
+
+  .goodbye{
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .footer-slogan{
+    font-size:18px;
+    font-weight:800;
   }
 }
+
+/* 
+homepage */
 
 .home-page {
   width: 100%;
@@ -225,6 +324,7 @@ a:hover {
 .icons {
   display: flex;
   flex-direction: row;
+  
 }
 
 .fb,
@@ -238,31 +338,14 @@ a:hover {
 }
 
 .icons img:hover{
-box-shadow:4px 4px 10px white;
-border-radius:100px;
+opacity: 0.75;
 }
 
 
-.contact-message {
-  margin-bottom: 20px;
-}
 
-.email, .number, .address{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-.contact-details{
-  text-align: center;
-}
 
 @media screen and (max-width: 1200px) {
-  .intro-container {
-    box-shadow: 10px 10px 20px white;
-  }
+
 
   .intro {
     flex-direction: column;
@@ -301,7 +384,7 @@ border-radius:100px;
   }
 
   .row2 {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -318,10 +401,12 @@ border-radius:100px;
 
   .humandada {
     width: 300px;
-    height: 200px;
+    height: 280px;
     object-fit: cover;
     width: 80%;
-    margin: 100px auto 0px;
+    margin-top:40px;
     border-radius: 400px;
   }
 }
+
+

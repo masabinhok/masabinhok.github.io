@@ -1,0 +1,148 @@
+.about-page{
+  margin-top:100px;
+  width:100%;
+  height:fit-content;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:200px;
+
+}
+
+@media screen and (max-width:600px) {
+  .about-page
+  {
+    margin-bottom:0px;
+    margin-top:80px;
+  }
+}
+
+.about-container{
+  width:1200px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom:100px;
+}
+
+.about-head{
+  font-weight:600;
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.about-hi{
+  font-weight:500;
+  font-size:20px;
+  color:rgb(36, 36, 36);
+  margin-bottom:8px;
+
+}
+
+.about-intro{
+  color:rgb(51, 51, 51);
+  margin-bottom:40px;
+}
+
+
+.about-details{
+  display:flex;
+  gap:1em;
+
+}
+
+.q-items {
+  padding-bottom:4px;
+  font-weight:500;
+}
+
+.a-items {
+  padding-bottom:4px;
+  font-weight:400;
+}
+
+
+
+
+.tangled{
+  margin-top:-100px;
+}
+
+
+.education{
+  display: flex;
+  flex-direction: row;
+  gap:2em;
+}
+
+
+.ed-title{
+  text-align: center;
+  font-size:24px;
+  font-weight:bold;
+}
+
+
+.ed-name{
+  font-weight:600;
+}
+
+.ed-date{
+  font-weight: 400;
+}
+
+.ed-achievments{
+  font-weight:500;
+}
+
+@media screen and (max-width:1200px){
+  .education{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:40px;
+    margin-bottom:40px;
+
+  }
+
+  .education div{
+    text-align: center;
+  }
+
+  
+}
+
+
+
+
+@media screen and (max-width:1200px){
+
+  .about-container{
+    width:80%;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  .about-image{
+    align-self: flex-end;
+  }
+
+  .tangled{
+    width:200px;
+    height:400px;
+    object-fit: cover;
+    padding:16px;
+    margin-top:-140px;
+    margin-bottom:-140px;
+    align-self:flex-end;
+
+  }
+  
+
+
+  
+}
+
+
+
