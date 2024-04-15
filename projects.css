@@ -9,7 +9,9 @@
 }
 
 @media screen and (max-width:1200px) {
-  .project-page 
+  .project-page {
+  width:300px;
+  }
 }
 
 .project-title{
