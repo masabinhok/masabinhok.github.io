@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabin Shrestha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <style>
+      body {
+        font-family: "montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header1">erSabin.</div>
+      <div class="header2">
+        <a href="index.html"><div class="home">Home</div></a>
+        <a href="index.html"><div class="about-me">About me</div></a>
+
+        <a href="index.html"><div class="project">Projects</div></a>
+        <a href="index.html"> <div class="contact-me">Contact</div></a>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <input
+      type="checkbox"
+      id="sidebar-toggle"
+      class="sidebar-toggle-checkbox"
+    />
+    <div class="sidebar">
+      <a href="index.html">
+        <div class="s-menu">Home</div>
+      </a>
+
+      <a href="index.html"> <div class="s-about">About Me</div></a>
+      <a href="index.html"><div class="s-project">Projects</div></a>
+      <a href="index.html"> <div class="s-contact">Contacts</div></a>
+      <label for="sidebar-toggle" class="sidebar-toggle-label2">☰</label>
+    </div>
+
+    <main class="project2">
+      <div class="pcontainer">
+        <div class="project1">
+          <div class="ptitle">
+            Building an Arduino Nano-Based Smart Blind Stick for Enhanced
+            Mobility
+          </div>
+          <div class="p-details">
+            <div class="p-intro">
+              <h3>INTRODUCTION</h3>
+              <p>
+                Navigating through the world can be challenging for people with
+                visual impairments. Traditional methods like white canes are
+                effective but lack features to detect obstacles at head or chest
+                height. In this project, we'll guide you through building a
+                smart blind stick using Arduino Nano, which incorporates
+                ultrasonic sensors to detect obstacles at various heights,
+                providing enhanced mobility and safety for the visually
+                impaired.
+              </p>
+              <h3>MATERIALS REQUIRED</h3>
+              <ul>
+                <li>Arduino Nano</li>
+                <li>ULtrasonic Sensors(HC-SR04)</li>
+                <li>Buzzer</li>
+                <li>Vibrating Motor</li>
+                <li>Li-ion Battery</li>
+                <li>Battery Holder</li>
+                <li>Connecting Wires</li>
+                <li>PVC pipe</li>
+                <li>Power Switch</li>
+                <li>UDB cable for programming</li>
+              </ul>
+
+              <h3>HARDWARE SETUP</h3>
+              <ul>
+                <li>
+                  Connect the ultrasonic sensors to the Arduino Nano. Wire the
+                  trig pin of each sensor to digital pins and the echo pin to
+                  the corresponding analog pins.
+                </li>
+                <li>
+                  Connect the buzzer and vibrating motor to the Arduino Nano.
+                  The buzzer can be connected to any digital pin, and the
+                  vibrating motor can be connected to any other digital pin.
+                </li>
+                <li>
+                  Assemble the hardware components onto the PVC pipe, ensuring
+                  the ultrasonic sensors are at various heights to detect
+                  obstacles.
+                </li>
+                <li>
+                  Connect the Li-ion battery to the Arduino Nano using the
+                  battery holder and switch.
+                </li>
+              </ul>
+
+              <h3>SOFTWARE IMPLEMENTATION</h3>
+              <ul>
+                <li>
+                  Install the Arduino IDE on your computer if you haven't
+                  already.
+                </li>
+                <li>
+                  Download the necessary libraries for the ultrasonic sensors.
+                </li>
+                <li>
+                  Write the Arduino code to read data from the ultrasonic
+                  sensors and trigger the buzzer and vibrating motor when
+                  obstacles are detected.
+                </li>
+                <li>
+                  Implement logic to determine the distance threshold for
+                  obstacle detection and adjust sensitivity as needed.
+                </li>
+                <li>
+                  Upload the code to the Arduino Nano using the USB cable.
+                </li>
+              </ul>
+
+              <pre><code><h3 style="color:white">Arduino Code</h3>
+// defines pins numbers
+const int trigPin = 2; // Connected to D2
+const int echoPin = 3; // Connected to D3
+const int ledPin = A3; // Connected to A3
+
+// defines variables
+long duration;
+int distance;
+int safetyDistance;
+
+void setup() {
+pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
+pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+pinMode(ledPin, OUTPUT); // Sets the LED pin as an Output
+Serial.begin(9600); // Starts the serial communication
+}
+
+void loop() {
+// Clears the trigPin
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+
+// Sets the trigPin on HIGH state for 10 microseconds
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trigPin, LOW);
+
+// Reads the echoPin, returns the sound wave travel time in microseconds
+duration = pulseIn(echoPin, HIGH);
+
+// Calculating the distance
+distance = duration * 0.034 / 2;
+safetyDistance = distance;
+
+if (safetyDistance <= 18) {
+digitalWrite(ledPin, HIGH); // Turn off the LED connected to A3
+} else {
+digitalWrite(ledPin, LOW); // Turn on the LED connected to A3
+}
+
+// Prints the distance on the Serial Monitor
+Serial.print("Distance: ");
+Serial.println(distance);
+}
+</code>
+              </pre>
+              <h3>TESTING AND CALLIBRATION</h3>
+              <ul>
+                <li>
+                  Power on the blind stick and ensure all components are
+                  functioning correctly.
+                </li>
+                <li>
+                  Test the obstacle detection by placing objects of various
+                  heights in front of the sensors.
+                </li>
+                <li>
+                  Calibrate the distance thresholds and sensitivity settings to
+                  optimize performance in different environments.
+                </li>
+                <li>
+                  Test the device in real-world scenarios to ensure reliability
+                  and accuracy.
+                </li>
+              </ul>
+
+              <h3>CONCLUSION</h3>
+              <p>
+                By combining Arduino Nano with ultrasonic sensors, you can
+                create a smart blind stick that enhances mobility and safety for
+                individuals with visula impairments. This project demonstrates
+                how technology can be levaraged to address specific challanges
+                and improve the quality of life for people with disablities.
+                With further development and refinement, such devices have the
+                potential to make a significant impact on accessibility and
+                inclusivity in society.
+              </p>
+
+              <div class="video-div">
+                <h3>VIDEO DEMONSTRATION</h3>
+                <video controls class="video">
+                  <source src="blindstick.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="goodbye">Sayonara!</div>
+        <div class="footer-slogan">Am i an art, or an artist?</div>
+
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/profile.php?id=100054620642788"
+            ><div><img class="fb" src="facebookk.png" /></div
+          ></a>
+          <a href="https://www.instagram.com/masabinhok/"
+            ><div><img class="ig" src="instagram.png" /></div
+          ></a>
+          <a href="https://github.com/masabinhok"
+            ><div><img class="git" src="github.png" /></div
+          ></a>
+          <a href="https://discord.com/users/1189924455263248534"
+            ><div><img class="discord" src="discordd.jpg" /></div
+          ></a>
+        </div>
+      </div>
+      <div class="go-up">
+        <a href="#to-homepage"><img class="up" src="upp.jpg" /></a>
+      </div>
+    </footer>
+  </body>
+</html>

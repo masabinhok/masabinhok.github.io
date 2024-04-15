@@ -1,111 +1,199 @@
-.project-page{
-  width:1200px;
-  display:flex;
+.project-page {
+  width: 1200px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom:100px;
-  padding-bottom:50px;
-
+  margin-bottom: 160px;
+  padding-bottom: 50px;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
   .project-page {
-  width:300px;
+    margin-top:-160px;
+    width: 600px;
+    margin-bottom:20px;
   }
 }
 
-.project-title{
-  font-weight:700;
-  font-size:24px;
-  padding:16px;
-  margin-bottom:14px;
+@media screen and (max-width:600px) {
+  .project-page{
+    margin-top:0px;
+    width:300px;
+  }
 }
 
-.project-container{
-display:flex;
-flex-direction: row;
-gap:50px;
-justify-content: space-around;
-flex-wrap: wrap;
-
-
-
-}
-
-.project-box{
-  width:300px;
-  border-radius: 8px;
-  padding:8px;
-  height:400px;
-   box-shadow:5px 5px 10px rgb(196, 196, 196);
-
-
-}
-
-.tower{
-  border-radius: 400px;
-}
-
-.project-details{
-  display: flex;
-  flex-wrap: wrap;
-
-}
-
-
-.quote-page{
-  width:1200px;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom :100px
-
-}
-
-
-
-.quote-heading{
+.project-title {
+  font-weight: 700;
   font-size: 24px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-box {
+  width: 300px;
+  border-radius: 8px;
+  padding: 8px;
+  height: 400px;
+  box-shadow: 5px 5px 10px rgb(196, 196, 196);
+}
+
+.project-image {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name {
+  padding: 10px;
   font-weight: 600;
-  margin-bottom:30px;
-
+  font-size: 20px;
 }
 
-.quote-container{
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  gap:4em;
-  justify-content: center;
+.project-details {
+  padding: 10px;
 }
 
+.arduino {
+  width: 280px;
+  border-radius: 4px;
+}
 
-.quote-box{
-  width:500px;
-  height:100px;
-  box-shadow:5px 5px 10px rgb(196, 196, 196);
-  padding:16px;
+.project-box:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+pre {
+  background-color: black;
+  color: white;
+  overflow: auto;
+  padding: 10px;
   border-radius: 16px;
 }
 
-.quote{
-  font-weight:500;
+.quote-page {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
 }
 
+.quote-heading {
+  font-size: 24px;
+  font-weight: 700;
+  padding:16px;
+  margin-bottom: 50px;
+}
 
-@media screen and (max-width:600px)  {
-  .quote-page{
-    width:300px;
+.quote-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+}
+
+.quote-box {
+  width: 500px;
+  height: 100px;
+  box-shadow: 5px 5px 10px rgb(196, 196, 196);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.quote {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .quote-page {
+    width: 300px;
+    margin-bottom:20px;
   }
 
-  .quote-container{
-    display:flex;
+  .quote-container {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    gap:2em;
   }
 
-  .quote-box{
-    width:300px;
+  .quote-heading{
+    margin-bottom:24px;
+  }
+
+  .quote-box {
+    width: 300px;
   }
 }
+
+.project2 {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pcontainer {
+  width: 1200px;
+  padding: 20px;
+}
+
+.ptitle {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+video{
+  border-radius:4px;
+  box-shadow:5px 5px 10px rgb(252, 215, 215);
+}
+
+@media screen and (max-width:1200px){
+  .project2 {
+    margin-top: 112px;
+  }
+  .pcontainer {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project2 {
+    margin-top: 112px;
+  }
+  .pcontainer {
+    width: 300px;
+  }
+
+.video-div{
+  width:300px;
+}
+
+.video{
+  width:300px;
+}
+
+  .video-div h3{
+    margin-bottom:20px;
+  }
+}
+
+
+
