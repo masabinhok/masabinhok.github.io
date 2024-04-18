@@ -1,7 +1,6 @@
 /* General Styles */
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -11,8 +10,8 @@ body {
   background-position: center;
   justify-content: center;
   align-items: center;
-  color: black;
-  background-color: rgb(230, 223, 223);
+  color: rgb(255, 208, 0);
+  background-color: #121212;
   scroll-behavior: smooth;
 }
 
@@ -20,16 +19,16 @@ a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.15s;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 a:hover {
-  color: rgb(61, 61, 61);
+  color: rgb(204, 204, 204);
 }
 
 /* Header CSS */
 .header {
-  background: linear-gradient(to top, #eae9ec, rgb(230, 223, 223));
+  background: linear-gradient(to top, rgb(22, 22, 22), rgb(44, 44, 44));
   position: fixed;
   width: 100%;
   display: flex;
@@ -40,6 +39,7 @@ a:hover {
 }
 
 .header1 {
+  color: rgb(255, 208, 0);
   display: flex;
   justify-content: center;
   margin-right: 20%;
@@ -63,7 +63,7 @@ a:hover {
 }
 
 .header2 div:hover {
-  color: rgb(53, 53, 53);
+  color: rgb(255, 208, 0);
 }
 
 @media screen and (max-width: 600px) {
@@ -81,7 +81,7 @@ a:hover {
 
 /* Sidebar CSS */
 .sidebar {
-  background: linear-gradient(to top, #eae9ec, rgb(230, 223, 223));
+  background: linear-gradient(to top, rgb(22, 22, 22), rgb(44, 44, 44));
   position: fixed;
   top: 0;
   right: -650px;
@@ -104,7 +104,7 @@ a:hover {
 }
 
 .sidebar div:hover {
-  color: rgb(82, 82, 82);
+  color: rgb(255, 208, 0);
 }
 
 .sidebar-toggle-checkbox {
@@ -122,11 +122,12 @@ a:hover {
   font-size: 20px;
   cursor: pointer;
   right: 16px;
-  top: 45px;
+  top: 42px;
+  color: rgb(255, 208, 0);
 }
 
-.sidebar-toggle-label2:active {
-  color: rgb(236, 230, 230);
+.sidebar-toggle-label2:hover {
+  color: rgb(255, 208, 0);
 }
 
 @media screen and (min-width: 600px) {
@@ -141,7 +142,7 @@ a:hover {
 
 /* Footer CSS */
 .footer {
-  background: linear-gradient(to bottom, #eae9ec, rgb(230, 223, 223));
+  background: linear-gradient(to top, rgb(22, 22, 22), rgb(22, 22, 22));
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -176,6 +177,7 @@ a:hover {
 .footer-slogan {
   font-size: 16px;
   font-weight: 600;
+  color: #a7a7a7;
 }
 
 .footer-icons {
@@ -190,32 +192,19 @@ a:hover {
   align-items: center;
 }
 
-.up {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 20px;
+.fa.fa-angle-double-up {
   cursor: pointer;
+  font-size:30px;
+  align-self: center;
+  margin:auto;
 }
 
 .go-up:hover {
   opacity: 0.75;
 }
 
-.fb,
-.git,
-.ig,
-.discord {
-  width: 30px;
-  height: 30px;
-  border-radius: 80px;
-  padding: 4px;
-}
 
-.footer-icons img:hover {
-  opacity: 0.75;
-  border-radius: 100px;
-}
+
 
 @media screen and (min-width: 600px) {
   .footer {
@@ -239,10 +228,18 @@ a:hover {
 /* 
 homepage */
 
+.cse {
+  color: #a7a7a7;
+}
+
+.campus {
+  color: #a7a7a7;
+}
+
 .home-page {
   width: 100%;
   margin-top: 80px;
-  background-color: rgb(230, 223, 223);
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,12 +288,14 @@ homepage */
 .i-name {
   font-size: 40px;
   font-weight: 800;
-  text-shadow: 2px 2px 10px white;
+
+  color: white;
 }
 
 .i-slogan {
   font-size: 20px;
   margin-bottom: 40px;
+  color: #a7a7a7;
 }
 
 .icons {
@@ -318,6 +317,12 @@ homepage */
   opacity: 0.75;
 }
 
+.fa.fa-facebook, .fa.fa-instagram, .fa.fa-github{
+  padding:8px;
+  font-size:24px;
+  
+}
+
 @media screen and (max-width: 1200px) {
   .intro {
     flex-direction: column;
@@ -329,15 +334,7 @@ homepage */
     flex: 0.25;
   }
 
-  .fb,
-  .git,
-  .ig,
-  .discord {
-    width: 20px;
-    height: 20px;
-    border-radius: 100px;
-    padding: 8px;
-  }
+
 
   .i-hi {
     margin-top: 0px;
