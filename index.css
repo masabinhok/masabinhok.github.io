@@ -28,7 +28,11 @@ a:hover {
 
 /* Header CSS */
 .header {
+<<<<<<< HEAD
   background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0));
+=======
+  background: linear-gradient(to top, rgb(22, 22, 22), rgb(44, 44, 44));
+>>>>>>> 3ddd7a696c38bd1d649910965d23e06b22072557
   position: fixed;
   width: 100%;
   display: flex;
@@ -81,7 +85,11 @@ a:hover {
 
 /* Sidebar CSS */
 .sidebar {
+<<<<<<< HEAD
   background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0));
+=======
+  background: linear-gradient(to top, rgb(22, 22, 22), rgb(44, 44, 44));
+>>>>>>> 3ddd7a696c38bd1d649910965d23e06b22072557
   position: fixed;
   top: 0;
   right: -650px;
@@ -142,7 +150,11 @@ a:hover {
 
 /* Footer CSS */
 .footer {
+<<<<<<< HEAD
   background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0));
+=======
+  background: linear-gradient(to top, rgb(22, 22, 22), rgb(22, 22, 22));
+>>>>>>> 3ddd7a696c38bd1d649910965d23e06b22072557
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -177,7 +189,8 @@ a:hover {
 .footer-slogan {
   font-size: 16px;
   font-weight: 600;
-  color: #ffffff;
+  color: #a7a7a7;
+
 }
 
 .footer-icons {
