@@ -3,22 +3,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 160px;
+  margin-bottom: 60px;
   padding-bottom: 50px;
 }
 
 @media screen and (max-width: 1200px) {
   .project-page {
-    margin-top:-160px;
+    margin-top: -160px;
     width: 600px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width:600px) {
-  .project-page{
-    margin-top:0px;
-    width:300px;
+@media screen and (max-width: 600px) {
+  .project-page {
+    margin-top: 0px;
+    width: 300px;
   }
 }
 
@@ -42,7 +42,7 @@
   border-radius: 8px;
   padding: 8px;
   height: 400px;
-  box-shadow: 5px 5px 10px rgb(196, 196, 196);
+  background-color: #242424;
 }
 
 .project-image {
@@ -60,9 +60,11 @@
   padding: 10px;
   font-weight: 600;
   font-size: 20px;
+  color: white;
 }
 
 .project-details {
+  color: #a7a7a7;
   padding: 10px;
 }
 
@@ -95,7 +97,7 @@ pre {
 .quote-heading {
   font-size: 24px;
   font-weight: 700;
-  padding:16px;
+  padding: 16px;
   margin-bottom: 50px;
 }
 
@@ -108,21 +110,22 @@ pre {
 }
 
 .quote-box {
+  background-color: #242424;
   width: 500px;
   height: 100px;
-  box-shadow: 5px 5px 10px rgb(196, 196, 196);
   padding: 16px;
   border-radius: 16px;
 }
 
 .quote {
+  color: white;
   font-weight: 500;
 }
 
 @media screen and (max-width: 600px) {
   .quote-page {
     width: 300px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
 
   .quote-container {
@@ -130,11 +133,11 @@ pre {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap:2em;
+    gap: 2em;
   }
 
-  .quote-heading{
-    margin-bottom:24px;
+  .quote-heading {
+    margin-bottom: 24px;
   }
 
   .quote-box {
@@ -142,12 +145,16 @@ pre {
   }
 }
 
+/* 
+arduinocss */
+
 .project2 {
   margin-top: 80px;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  color:#a7a7a7;
 }
 
 .pcontainer {
@@ -158,14 +165,19 @@ pre {
 .ptitle {
   font-size: 24px;
   font-weight: 800;
+  color: rgb(255, 208, 0);
 }
 
-video{
-  border-radius:4px;
-  box-shadow:5px 5px 10px rgb(252, 215, 215);
+h3{
+  color:white;
 }
 
-@media screen and (max-width:1200px){
+
+video {
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px) {
   .project2 {
     margin-top: 112px;
   }
@@ -182,18 +194,15 @@ video{
     width: 300px;
   }
 
-.video-div{
-  width:300px;
-}
+  .video-div {
+    width: 300px;
+  }
 
-.video{
-  width:300px;
-}
+  .video {
+    width: 300px;
+  }
 
-  .video-div h3{
-    margin-bottom:20px;
+  .video-div h3 {
+    margin-bottom: 20px;
   }
 }
-
-
-

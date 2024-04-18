@@ -1,7 +1,7 @@
-.extra-contact{
+.extra-contact {
   font-weight: 700;
   font-size: 24px;
-  margin:40px auto;
+  margin: 40px auto;
 }
 
 .contact-page {
@@ -9,43 +9,42 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(230, 223, 223);
+  background-color: #121212;
   width: 1200px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
-
-
-.contact-box{
-  flex:1;
-  order:1;
-  display:flex;
+.contact-box {
+  flex: 1;
+  order: 1;
+  display: flex;
   flex-direction: column;
-
 }
 
-.contact-details{
-  order:2;
-  display:flex;
+.contact-details {
+  order: 2;
+  display: flex;
   flex-direction: column;
   justify-content: start;
-  margin-top:-80px;
+  margin-top: -80px;
 }
-
 
 .lets-talk {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex:1;
-
+  flex: 1;
+  color: white;
 }
 
-.touch{
-  width:300px;
-  margin:50px;
+.details {
+  color: white;
 }
 
+.touch {
+  width: 300px;
+  margin: 50px;
+}
 
 .contact-name {
   font-size: 26px;
@@ -56,36 +55,26 @@
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  flex:1;
+  flex: 1;
 }
 
-
-
 @media screen and (max-width: 600px) {
-
-  .touch{
-    display:none;
+  .touch {
+    display: none;
   }
-  .contact-page{
-    width:300px;
+  .contact-page {
+    width: 300px;
     flex-direction: column;
-  
   }
   .contact-title {
     display: none;
   }
 
-  .contact-details{
-    margin:20px auto;
-    margin-bottom:40px;
+  .contact-details {
+    margin: 20px auto;
+    margin-bottom: 40px;
   }
 }
-
-
-
-
-
-
 
 .inquiry,
 .details {
@@ -94,14 +83,12 @@
   align-self: center;
 }
 
-
-
 .form-elements {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin:auto;
+  margin: auto;
 }
 
 form {
@@ -110,7 +97,7 @@ form {
 
 input[type="text"],
 input[type="email"],
-input[type="number"],
+input[type="tel"],
 textarea {
   width: 400px;
   padding: 8px;
@@ -123,28 +110,29 @@ textarea {
   border: 2px solid black;
 }
 
-textarea{
-  width:400px;
-  height:160px;
+textarea {
+  width: 400px;
+  height: 160px;
+  resize: none;
 }
 
 @media screen and (max-width: 600px) {
   input[type="text"],
   input[type="email"],
-  input[type="number"] {
+  input[type="tel"] {
     width: 100%;
   }
 
-  .inquiry{
+  .inquiry {
     margin-bottom: 0;
   }
   textarea {
     width: 100%;
-    height:160px;
+    height: 160px;
   }
 
-  .details{
-    margin-bottom:24px;
+  .details {
+    margin-bottom: 24px;
   }
 }
 
@@ -152,34 +140,49 @@ textarea{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap:4em;
+  gap: 4em;
 }
 
-.submit-button,
+
 .reset-button {
   padding: 16px 32px;
   font-size: 16px;
   margin-top: 16px;
   margin-bottom: 20px;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 40px;
   background-color: white;
   cursor: pointer;
   font-weight: bold;
-  color: rgb(99, 99, 99);
+  color:black;
   transition: color 0.15s, background-color 0.15s;
-  box-shadow: 0 0 10px white;
-  
+  border:white 1px solid;
 }
 
-.submit-button:hover,
+.submit-button{
+padding: 16px 32px;
+font-size:16px;
+border:none;
+background-color: #121212;
+color:#a7a7a7;
+font-weight:700;
+cursor:pointer;
+
+}
+
+.submit-button:hover{
+  color: white;
+
+}
+
 .reset-button:hover {
   background-color: black;
-  color: rgb(230, 223, 223);
+  color:white;
+  border:white 1px solid;
 }
 
 ::placeholder {
-  color: #999;
+  color: #000000;
 }
 
 .info {
@@ -191,28 +194,35 @@ textarea{
 
 .contact-message {
   margin-bottom: 20px;
+  color: #a7a7a7;
 }
 
-.email, .number, .address{
-  display:flex;
+.email,
+.number,
+.address a {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  
+  color: #a7a7a7;
 }
-
-
+.email,
+.number,
+.address h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
 
 .contact-message {
-  margin-top:20px;
+  margin-top: 20px;
   text-align: center;
-  text-shadow: 4px 4px 10px white;
 }
 
-h3{
-font-weight:600;
-
+h3 {
+  font-weight: 600;
 }
 
 .address a {
@@ -220,18 +230,25 @@ font-weight:600;
 }
 
 @media screen and (max-width: 600px) {
+
+  .details{
+    margin-top:20px;
+  }
   .contact-message {
     margin-top: -16px;
-
     text-align: center;
   }
 
-
-  h3{
-    margin-bottom:2px;
+  h3 {
+    margin-bottom: 2px;
   }
   .my-message {
     font-size: 14px;
-    color: rgb(39, 39, 39);
+    color: #a7a7a7;
+  }
+
+  .contact-page{
+    margin-bottom:0px;
   }
 }
+
