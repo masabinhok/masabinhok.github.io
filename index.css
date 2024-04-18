@@ -81,7 +81,7 @@ a:hover {
 
 /* Sidebar CSS */
 .sidebar {
-  background: linear-gradient(to top, rgb(22, 22, 22), rgb(44, 44, 44));
+  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0));
   position: fixed;
   top: 0;
   right: -650px;
@@ -142,7 +142,7 @@ a:hover {
 
 /* Footer CSS */
 .footer {
-  background: linear-gradient(to top, rgb(0, 0, 0), rgbrgb(0, 0, 0));
+  background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0));
   display: flex;
   justify-content: center;
   flex-direction: row;
