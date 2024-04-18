@@ -156,7 +156,6 @@ textarea {
   font-weight: bold;
   color:black;
   transition: color 0.15s, background-color 0.15s;
-<<<<<<< HEAD
   border:white 1px solid;
 }
 
@@ -180,7 +179,7 @@ cursor:pointer;
   background-color: black;
   color:white;
   border:white 1px solid;
-=======
+
 }
 
 .submit-button{
@@ -203,7 +202,7 @@ cursor:pointer;
   background-color: black;
   color:white;
   border:white 0.1px solid;
->>>>>>> 3ddd7a696c38bd1d649910965d23e06b22072557
+
 }
 
 ::placeholder {
