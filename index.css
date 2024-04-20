@@ -28,7 +28,6 @@ a:hover {
 
 /* Header CSS */
 .header {
-
   background: linear-gradient(to top, rgb(0, 0, 0), rgb(0, 0, 0));
 
   position: fixed;
@@ -182,7 +181,6 @@ a:hover {
   font-size: 16px;
   font-weight: 600;
   color: #a7a7a7;
-
 }
 
 .footer-icons {
@@ -199,17 +197,21 @@ a:hover {
 
 .fa.fa-angle-double-up {
   cursor: pointer;
-  font-size:30px;
+  font-size: 30px;
   align-self: center;
-  margin:auto;
+  margin: auto;
 }
 
 .go-up:hover {
   opacity: 0.75;
 }
 
-
-
+.profile {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 20px;
+}
 
 @media screen and (min-width: 600px) {
   .footer {
@@ -322,10 +324,11 @@ homepage */
   opacity: 0.75;
 }
 
-.fa.fa-facebook, .fa.fa-instagram, .fa.fa-github{
-  padding:8px;
-  font-size:24px;
-  
+.fa.fa-facebook,
+.fa.fa-instagram,
+.fa.fa-github {
+  padding: 8px;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -338,8 +341,6 @@ homepage */
   .row1 {
     flex: 0.25;
   }
-
-
 
   .i-hi {
     margin-top: 0px;
@@ -377,6 +378,6 @@ homepage */
     object-fit: cover;
     width: 80%;
     margin-top: 40px;
-    border-radius: 400px;
+    border-radius: 200px;
   }
 }
