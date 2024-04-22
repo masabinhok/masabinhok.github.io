@@ -9,7 +9,6 @@
 
 @media screen and (max-width: 1200px) {
   .project-page {
-    margin-top: -160px;
     width: 600px;
     margin-bottom: 20px;
   }
@@ -66,10 +65,13 @@
 .project-details {
   color: #a7a7a7;
   padding: 10px;
+  font-weight:400;
 }
 
-.arduino {
+.project-demo{
+  object-fit: cover;
   width: 280px;
+  height:200px;
   border-radius: 4px;
 }
 
@@ -85,6 +87,18 @@ pre {
   padding: 10px;
   border-radius: 16px;
 }
+
+
+
+@media screen and (max-width:600px) {
+  .project-container{
+    flex-direction: column;
+  }
+}
+
+/* 
+quotes */
+
 
 .quote-page {
   width: 1200px;
