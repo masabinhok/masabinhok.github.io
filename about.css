@@ -8,6 +8,8 @@
   margin-bottom: 200px;
 }
 
+
+
 @media screen and (max-width: 600px) {
   .about-page {
     margin-bottom: 0px;
@@ -127,3 +129,6 @@
     align-self: flex-end;
   }
 }
+
+
+

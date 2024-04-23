@@ -293,10 +293,35 @@ homepage */
 }
 
 .i-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 30px;
+  
+}
+
+
+.span-name{
   font-size: 40px;
   font-weight: 800;
-
   color: white;
+  padding-right:2px;
+  font-size: 24px; /* Adjust as needed */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  border-right: 1px solid rgb(0, 0, 0); /* Cursor effect */
+  animation: typing 3s steps(10000) infinite; /* Adjust duration as needed */
+  text-align: left;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .i-slogan {

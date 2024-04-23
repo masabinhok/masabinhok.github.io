@@ -46,36 +46,39 @@
   border-radius: 8px;
   background-color: rgb(255, 208, 0);
   flex: 0.96;
-  transition:background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
-.html-level:hover{
-background-color: rgb(72, 255, 0);
-}.css-level:hover{
+.html-level:hover {
   background-color: rgb(72, 255, 0);
-}.git-level:hover{
-background-color: rgb(72, 255, 0);
-}.c-level:hover{
-background-color: rgb(72, 255, 0);
+}
+.css-level:hover {
+  background-color: rgb(72, 255, 0);
+}
+.git-level:hover {
+  background-color: rgb(72, 255, 0);
+}
+.c-level:hover {
+  background-color: rgb(72, 255, 0);
 }
 
 .css-level {
   border-radius: 8px;
   background-color: rgb(255, 208, 0);
   flex: 0.069;
-  transition:background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 .c-level {
   border-radius: 8px;
   background-color: rgb(255, 208, 0);
   flex: 0.69;
-  transition:background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 .git-level {
   border-radius: 8px;
   background-color: rgb(255, 208, 0);
   flex: 0.49;
-  transition:background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 @media screen and (max-width: 600px) {
@@ -95,5 +98,34 @@ background-color: rgb(72, 255, 0);
 
   .skill-empty {
     display: none;
+  }
+}
+
+/* 
+for animation */
+
+.html-level {
+  animation: skill-level 7s infinite alternate;
+}
+.css-level {
+  animation: skill-level 7s infinite alternate;
+}
+.git-level {
+  animation: skill-level 7s infinite alternate;
+}
+.c-level {
+  animation: skill-level 7s infinite alternate;
+}
+
+@keyframes skill-level {
+  0% {
+    background-color: white;
+    flex: 0;
+  }
+
+  100% {
+    color: rgb(255, 208, 0);
+    width:100%;
+    animation-delay: 1s;
   }
 }
