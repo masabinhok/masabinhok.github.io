@@ -49,18 +49,6 @@
   transition: background-color 0.5s ease;
 }
 
-.html-level:hover {
-  background-color: rgb(72, 255, 0);
-}
-.css-level:hover {
-  background-color: rgb(72, 255, 0);
-}
-.git-level:hover {
-  background-color: rgb(72, 255, 0);
-}
-.c-level:hover {
-  background-color: rgb(72, 255, 0);
-}
 
 .css-level {
   border-radius: 8px;
