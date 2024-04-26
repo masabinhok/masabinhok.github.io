@@ -1,26 +1,26 @@
-.project-page{
-  width:100%;
-  max-width:1200px;
-  margin:50px auto 100px;
+.project-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto 100px;
 }
 
-h1{
-  font-weight:700;
-  text-align:center;
-  font-size:24px;
+h1 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 24px;
 }
 
-.project-body{
-  padding:0;
+.project-body {
+  padding: 0;
   display: flex;
   justify-content: center;
-  gap:4px;
-  padding:8px;
+  gap: 4px;
+  padding: 8px;
 }
 
-.project-box{
-  width:80px;
-  height:100px;
+.project-box {
+  width: 80px;
+  height: 100px;
   background-color: #242424;
   display: flex;
   justify-content: center;
@@ -28,55 +28,50 @@ h1{
   border-radius: 16px;
   cursor: pointer;
   font-weight: 800;
-  font-size:24px;
-
+  font-size: 24px;
 }
 
-
-#one{
+#one {
   animation: chamelion 1s 0.2s infinite alternate;
 }
-#two{
+#two {
   animation: chamelion 1s 0.4s infinite alternate;
 }
-#three{
+#three {
   animation: chamelion 1s 0.6s infinite alternate;
 }
-#four{
+#four {
   animation: chamelion 1s 0.8s infinite alternate;
 }
-#five{
+#five {
   animation: chamelion 1s 1s infinite alternate;
 }
-#six{
+#six {
   animation: chamelion 1s 1.2s infinite alternate;
 }
-#seven{
+#seven {
   animation: chamelion 1s 1.4s infinite alternate;
 }
 
-
-@keyframes chamelion{
-  0%{
+@keyframes chamelion {
+  0% {
     background-color: #242424;
-    color:rgb(255, 208, 0);
-    
+    color: rgb(255, 208, 0);
   }
-  100%{
+  100% {
     background-color: #121212;
     color: #ffffff;
   }
 }
 
-.project-note{
+.project-note {
   text-align: center;
-  padding:16px;
+  padding: 16px;
   letter-spacing: 12px;
-  color:#a7a7a7;
+  color: #a7a7a7;
 }
 /* 
 quotes */
-
 
 .quote-page {
   width: 1200px;
@@ -102,7 +97,6 @@ quotes */
 }
 
 .quote-box {
-  background-color: #242424;
   width: 500px;
   height: 100px;
   padding: 16px;
@@ -135,11 +129,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .quote {
   color: white;
   font-weight: 500;
-
 }
 
 @media screen and (max-width: 600px) {
@@ -174,7 +166,7 @@ arduinocss */
   display: flex;
   align-items: center;
   flex-direction: column;
-  color:#a7a7a7;
+  color: #a7a7a7;
 }
 
 .pcontainer {
@@ -188,10 +180,9 @@ arduinocss */
   color: rgb(255, 208, 0);
 }
 
-h3{
-  color:white;
+h3 {
+  color: white;
 }
-
 
 video {
   border-radius: 4px;
