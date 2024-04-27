@@ -1,55 +1,87 @@
 /* General Styles */
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a7a7a7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Optional: Add smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
 }
 
-
-.content{
-  width:100%;
-  max-width:4000px;
-  margin-top:80px;
-  transition:background-color 1s ease-out;
-
+.content {
+  width: 100%;
+  max-width: 4000px;
+  margin-top: 80px;
+  transition: background-color 0.15s ease-in;
+  transition: color 0.15s ease-in;
+  display: flex;
 }
 /* .mode-switch-checkbox{
     
     } */
 
-    .mode-switch-button {
-      align-self: center;
-      cursor: pointer;
-    }
-    
-    .mode-switch-checkbox:checked ~ content {
-      color:yellow;
-      background-color: rgb(214, 214, 214);
-      transition:background-color 1s ease-in;
-      transition:color 1s ease-out;
-    }
-    .mode-switch-checkbox:checked ~ header {
-      background-color: rgb(255, 255, 255);
-      color:black;
-      transition:background-color 1s ease;
-      transition:color 1s ease-in;
-    }
-    .mode-switch-checkbox:checked ~ content div {
-      color:#121212;
-      transition:color 1s ease;
-    }
-    .mode-switch-checkbox:checked ~ content span {
-      color:black;
-      transition:color 1s ease;
-    }
-    .mode-switch-checkbox:checked ~ content h3{
-      color:rgb(0, 0, 0);
-      transition:color 1s ease;
-    }
-    .mode-switch-checkbox:checked ~ content a {
-      color:#242424;
-      transition:color 1s ease;
-    }
-    
-    
+.mode-switch-button {
+  align-self: center;
+  cursor: pointer;
+}
+
+.mode-switch-checkbox:checked ~ content {
+
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.15s ease-in;
+  transition: color 0.15s ease-in;
+}
+.mode-switch-checkbox:checked ~ header {
+  background-color: #f4f6f8;
+  color: black;
+  transition: background-color 0.15s ease;
+  transition: color 0.15s ease-in;
+}
+
+.mode-switch-checkbox:checked ~ content div {
+  color: #121212;
+  transition: color 0.15s ease-in;
+}
+.mode-switch-checkbox:checked ~ content span {
+  color: black;
+  transition: color 0.15s ease-in;
+}
+.mode-switch-checkbox:checked ~ content h3 {
+  color: rgb(0, 0, 0);
+  transition: color 0.15s ease-in;
+}
+.mode-switch-checkbox:checked ~ content a {
+  color: #242424;
+  transition: color 0.15s ease-in;
+}
+
+.mode-switch-checkbox:checked ~ content .form {
+  background-color: #f4f6f8;
+  transition: color 0.15s ease-in;
+}
+
+.mode-switch-checkbox:checked ~content footer {
+  background-color: #f4f6f8;
+  color: black;
+  transition: background-color 0.15s ease;
+  transition: color 0.15s ease-in;
+}
 
 body {
   background-color: #121212;
@@ -76,7 +108,7 @@ a:hover {
 }
 
 .mode-switch-checkbox:checked ~ header a {
-  color:black;
+  color: black;
 }
 
 /* Header CSS */
@@ -92,9 +124,9 @@ a:hover {
   border-radius: 40px;
   margin: 16px;
   top: 0;
-  z-index:3;
-  transition:background-color 1s ease-out;
-  transition:color 1s ease-out;
+  z-index: 3;
+  transition: background-color ease-in;
+  transition: color 0.15s ease-in;
 }
 
 .header1 {
@@ -106,7 +138,6 @@ a:hover {
   font-weight: 800;
   font-size: 30px;
   margin-left: 1em;
-
 }
 
 .header2 {
@@ -143,16 +174,14 @@ a:hover {
   }
 }
 
-.mode-switch-checkbox{
-    margin-top:-100px;
-    } 
+.mode-switch-checkbox {
+  margin-top: -100px;
+}
 
 .mode-switch-button {
   align-self: center;
   cursor: pointer;
 }
-
-
 
 /* Sidebar CSS */
 .sidebar {
@@ -172,7 +201,7 @@ a:hover {
   align-items: center;
   font-size: 12px;
   z-index: 100;
-  transition:right 0.5s ease-out;
+  transition: right 0.5s ease-out;
 }
 
 .sidebar div {
@@ -189,7 +218,7 @@ a:hover {
 
 .sidebar-toggle-checkbox:checked ~ .sidebar {
   right: -2px;
-  transition:right 0.5s ease;
+  transition: right 0.5s ease;
 }
 
 .sidebar-toggle-label2 {
@@ -217,93 +246,7 @@ a:hover {
   }
 }
 
-/* Footer CSS */
-.footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  height: fit-content;
-  width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  gap: 4em;
-}
 
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-}
-
-@media screen and (max-width: 600px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: none;
-    align-items: start;
-  }
-}
-
-.goodbye {
-  font-size: 14px;
-}
-
-.footer-slogan {
-  font-size: 16px;
-  font-weight: 600;
-  color: #a7a7a7;
-}
-
-.footer-icons {
-  display: flex;
-  flex-direction: row;
-  margin-left: -8px;
-}
-
-.go-up {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa.fa-angle-double-up {
-  cursor: pointer;
-  font-size: 30px;
-  align-self: center;
-  margin: auto;
-}
-
-.go-up:hover {
-  opacity: 0.75;
-}
-
-.profile {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-@media screen and (min-width: 600px) {
-  .footer {
-    gap: 6em;
-  }
-  .footer-container {
-    gap: 6em;
-  }
-
-  .goodbye {
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  .footer-slogan {
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
 
 /* 
 homepage */
@@ -339,26 +282,22 @@ homepage */
   align-items: center;
 }
 
-
 .row1 {
   flex-wrap: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
-  
 }
 
-
-.touch-me{
-  letter-spacing:20px;
-  margin-top:-40px;
-  margin-bottom:40px;
-  z-index:2;
-  font-weight:800;
-  color:rgb(255, 0, 0);
+.touch-me {
+  letter-spacing: 20px;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  z-index: 2;
+  font-weight: 800;
+  color: rgb(255, 0, 0);
 }
-
 
 .humandada {
   max-width: 400px;
@@ -431,8 +370,6 @@ homepage */
   font-size: 24px;
 }
 
-
-
 @media screen and (max-width: 1200px) {
   .intro {
     flex-direction: column;
@@ -445,10 +382,10 @@ homepage */
     align-items: center;
     flex: 0.25;
     position: relative;
-    width:400px;
-    height:400px;
-    margin-top:160px;
-  margin-bottom:10px;
+    width: 400px;
+    height: 400px;
+    margin-top: 160px;
+    margin-bottom: 10px;
   }
 
   .i-hi {
@@ -471,7 +408,7 @@ homepage */
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom:50px;
+    margin-bottom: 50px;
   }
 
   .cse {
@@ -481,13 +418,7 @@ homepage */
   .campus {
     font-size: 14px;
   }
-
-
-
-  
 }
-
-
 
 /* @keyframes gayab {
   0% {

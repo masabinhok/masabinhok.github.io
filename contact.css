@@ -2,6 +2,7 @@
   font-weight: 700;
   font-size: 24px;
   margin: 40px auto;
+  margin-bottom: 50px;
 }
 
 .contact-page {
@@ -11,7 +12,7 @@
   justify-content: center;
 
   width: 1200px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .contact-box {
@@ -48,7 +49,7 @@
 
 .contact-name {
   font-size: 26px;
-  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .contact-title {
@@ -86,9 +87,9 @@
 .form-elements {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   margin: auto;
+  align-items: center;
 }
 
 form {
@@ -99,9 +100,9 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 400px;
+  width: 350px;
   padding: 8px;
-  height: 36px;
+  height: 24px;
   margin-top: 24px;
   border: none;
   border-radius: 8px;
@@ -111,8 +112,8 @@ textarea {
 }
 
 textarea {
-  width: 400px;
-  height: 160px;
+  width: 350px;
+  height: 100px;
   resize: none;
 }
 
@@ -253,5 +254,24 @@ h3 {
 
   .contact-page {
     margin-bottom: 0px;
+  }
+}
+
+
+.form{
+  background-color: #181818;
+  border-radius: 16px;
+  padding:16px;
+  padding-top:0;
+  margin-top:16px;
+
+}
+
+@media screen and (max-width:600px) {
+  .form{
+    width:320px;
+    padding-left:30px;
+    padding-right:30px;
+    
   }
 }

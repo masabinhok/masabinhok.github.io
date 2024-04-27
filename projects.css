@@ -2,12 +2,21 @@
   width: 100%;
   max-width: 1200px;
   margin: 50px auto 100px;
+  
 }
 
-h1 {
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.project-head {
   font-weight: 700;
   text-align: center;
   font-size: 24px;
+  padding:16px;
 }
 
 .project-body {
@@ -71,95 +80,48 @@ h1 {
   color: #a7a7a7;
 }
 /* 
-quotes */
+poetry */
+ 
 
-.quote-page {
-  width: 1200px;
+.poetry-page{
+  width:1000px;
+  height:fit-content;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-.quote-heading {
-  font-size: 24px;
-  font-weight: 700;
-  padding: 16px;
-  margin-bottom: 50px;
-}
-
-.quote-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 4em;
-  justify-content: center;
-}
-
-.quote-box {
-  width: 500px;
-  height: 100px;
-  padding: 16px;
-  border-radius: 16px;
-  overflow: auto;
-}
-
-/* Hide the default scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #a7a7a7;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Optional: Add smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-.quote {
-  color: white;
-  font-weight: 500;
-}
-
-@media screen and (max-width: 600px) {
-  .quote-page {
-    width: 300px;
-    margin-bottom: 20px;
+  margin-bottom:50px;
   }
 
-  .quote-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2em;
-  }
+.poetry-head{
+  text-align: center;
+  font-weight:700;
+  font-size:24px;
+  padding:16px;
+}
 
-  .quote-heading {
-    margin-bottom: 24px;
-  }
+.poetry-body{
+  font-style: italic;
+  font-size:20px;
+  font-weight:400;
+  font-family: "Cedarville Cursive", cursive;
+  text-align: center;
+}
 
-  .quote-box {
-    width: 300px;
+.poetry{
+  display: inline-block;
+  margin-bottom:16px;
+  color:#a7a7a7;
+}
+
+
+@media screen and (max-width:600px) {
+  .poetry-page{
+    width:300px;
+    text-align: center;
   }
 }
 
-/* 
-arduinocss */
-
+/*arduinocss */
 .project2 {
   margin-top: 80px;
   width: 100%;

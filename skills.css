@@ -10,7 +10,7 @@
   font-size: 24px;
   font-weight: 700;
   align-self: center;
-  margin-bottom: 24px;
+  padding:16px;
 }
 
 .skill-box {
@@ -93,16 +93,16 @@
 for animation */
 
 .html-level {
-  animation: skill-level 7s infinite alternate;
+  animation: skill-level 10s  ;
 }
 .css-level {
-  animation: skill-level 7s infinite alternate;
+  animation: skill-level 10s   ;
 }
 .git-level {
-  animation: skill-level 7s infinite alternate;
+  animation: skill-level 10s  ;
 }
 .c-level {
-  animation: skill-level 7s infinite alternate;
+  animation: skill-level 10s  ;
 }
 
 @keyframes skill-level {
