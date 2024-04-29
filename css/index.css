@@ -24,15 +24,22 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  padding:0;
+  animation: opacity 1s ease-in;
+  margin: 0;
+}
 
 
 .content {
   width: 100%;
-  max-width: 4000px;
+  max-width: 40000px;
   margin-top: 80px;
   transition: background-color 0.15s ease-in;
   transition: color 0.15s ease-in;
   display: flex;
+  
+  
 }
 /* .mode-switch-checkbox{
     
@@ -55,6 +62,13 @@ html {
   transition: background-color 0.15s ease;
   transition: color 0.15s ease-in;
 }
+
+.mode-switch-checkbox:checked~ header label{
+  color:black;
+ 
+  transition:color 0.15s ease-in;
+}
+
 
 .mode-switch-checkbox:checked ~ .sidebar {
   background-color: #f4f6f8;
@@ -122,6 +136,7 @@ a:hover {
 
 /* Header CSS */
 .header {
+  align-self: center;
   background-color: #242424;
   position: fixed;
   width: 100%;
@@ -138,6 +153,16 @@ a:hover {
   transition: color 0.15s ease-in;
 }
 
+@keyframes opacity{
+  0%{
+    opacity:0;
+
+  }
+  100%{
+    opacity:1;
+  }
+}
+
 .header1 {
   color: rgb(255, 208, 0);
   display: flex;
@@ -147,7 +172,14 @@ a:hover {
   font-weight: 800;
   font-size: 30px;
   margin-left: 1em;
-  font-family: "Cedarville Cursive", cursive;
+  align-items: center;
+  
+}
+
+.header-image{
+  width:60px;
+  height:60px;
+
 }
 
 .header2 {
@@ -302,6 +334,7 @@ homepage */
   align-items: center;
   justify-content: center;
   flex: 1;
+  
 }
 
 
@@ -390,21 +423,24 @@ homepage */
     position: relative;
     width: 400px;
     height: 400px;
-    margin-top: 160px;
+    margin-top: 250px;
     margin-bottom: 10px;
   }
 
   .i-hi {
     margin-top: 0px;
     font-size: 20px;
+    font-weight:500;
   }
 
   .i-name {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 700;
+    
   }
 
   .i-slogan {
+    font-weight: 500;
     font-size: 14px;
   }
 
@@ -418,7 +454,7 @@ homepage */
   }
 
   .cse {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .campus {
@@ -426,20 +462,33 @@ homepage */
   }
 }
 
-/* @keyframes gayab {
-  0% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
+.hire-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
-@keyframes  jadu{
-  0% {
-    transform:rotateY(360deg);
 
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-} */
+.hire-me-button{
+  width:180px;
+  padding:10px 36px;
+  margin-top:8px;
+  
+  height:48px;
+  border-radius: 40px;
+  border:none;
+  box-sizing: border-box;
+  padding:12px;
+  font-family: "Nunito Sans", sans-serif;
+  cursor:pointer;
+  font-size:15px;
+  font-weight: 700;
+  color:rgb(12, 12, 12);
+  background-color: #f6e05e;
+
+}
+.hire-me-button:hover{
+  opacity:0.75;
+  transform:translateY(-2px);
+
+}

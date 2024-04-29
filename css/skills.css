@@ -75,6 +75,8 @@
   transition: background-color 0.5s ease;
 }
 
+
+
 @media screen and (max-width: 600px) {
   .skill-page {
     margin-top: 40px;
@@ -115,12 +117,11 @@ for animation */
 
 @keyframes skill-level {
   0% {
-    background-color: white;
+   
     flex: 0;
   }
 
   100% {
-    color: rgb(255, 208, 0);
     width:100%;
     animation-delay: 1s;
   }

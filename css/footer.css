@@ -1,4 +1,5 @@
 .footer{
+  margin-bottom:0px;
   width:100%;
   display:flex;
   flex-direction: row;
@@ -20,7 +21,7 @@ footer{
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:1200px) {
   .footer{
     width:300px;
     display: flex;

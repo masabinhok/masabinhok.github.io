@@ -10,11 +10,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+
+  width: 1200px;
   margin-bottom: 100px;
 }
-
-
 
 .contact-box {
   flex: 1;
@@ -73,8 +72,8 @@
   }
 
   .contact-details {
+    margin: 20px auto;
     margin-bottom: 40px;
-    margin-top:50px;
   }
 }
 
@@ -95,14 +94,13 @@
 
 form {
   width: 100%;
-  max-width:300px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 350px;
+  width: 300px;
   padding: 8px;
   height: 24px;
   margin-top: 24px;
@@ -110,16 +108,16 @@ textarea {
   border-radius: 8px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   outline: none;
-  border: 2px solid black;
+  
 }
 
 textarea {
-  width: 350px;
+  width: 300px;
   height: 100px;
   resize: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   input[type="text"],
   input[type="email"],
   input[type="tel"] {
@@ -151,19 +149,19 @@ textarea {
   font-size: 16px;
   margin-top: 16px;
   margin-bottom: 20px;
-  border: 2px solid black;
   border-radius: 40px;
+  border:none;
   background-color: white;
   cursor: pointer;
   font-weight: bold;
   color: black;
   transition: color 0.15s, background-color 0.15s;
-  border: white 1px solid;
+  box-sizing: border-box;
 }
 .reset-button:hover {
   background-color: black;
   color: white;
-  border: white 1px solid;
+
 }
 
 .submit-button {
@@ -173,20 +171,21 @@ textarea {
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 40px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   font-weight: bold;
   color: black;
   transition: color 0.15s, background-color 0.15s;
-  border: white 1px solid;
+  box-sizing: border-box;
+  border: none;
 }
 
 
 
 .submit-button:hover {
   background-color: black;
-  color: white;
-  border: white 0.1px solid;
+  color: rgb(255, 255, 255);
+
 }
 
 ::placeholder {
@@ -237,7 +236,7 @@ h3 {
   font-weight: 400;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .details {
     margin-top: 20px;
   }
@@ -266,13 +265,16 @@ h3 {
   padding:16px;
   padding-top:0;
   margin-top:16px;
-  width:300px;
 
 }
 
+
+
+  
+
 @media screen and (max-width:1200px) {
   .form{
-    width:300px;
+    width:320px;
     padding-left:30px;
     padding-right:30px;
     
