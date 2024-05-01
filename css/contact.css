@@ -149,18 +149,20 @@ textarea {
   font-size: 16px;
   margin-top: 16px;
   margin-bottom: 20px;
-  border-radius: 40px;
   border:none;
-  background-color: white;
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
-  transition: color 0.15s, background-color 0.15s;
+  border-radius: 40px;
   box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  cursor:pointer;
+  font-size:15px;
+  font-weight: 700;
+  color:rgb(12, 12, 12);
+  background-color: #ffffff;
 }
+
 .reset-button:hover {
-  background-color: black;
-  color: white;
+  opacity: 0.9;
+  transform: translateY(-1px);
 
 }
 
@@ -171,10 +173,10 @@ textarea {
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 40px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 208, 0);
   cursor: pointer;
   font-weight: bold;
-  color: black;
+  color: #242424;
   transition: color 0.15s, background-color 0.15s;
   box-sizing: border-box;
   border: none;
@@ -183,8 +185,8 @@ textarea {
 
 
 .submit-button:hover {
-  background-color: black;
-  color: rgb(255, 255, 255);
+  opacity: 0.9;
+  transform: translateY(-1px);
 
 }
 
@@ -260,7 +262,7 @@ h3 {
 
 
 .form{
-  background-color: #181818;
+  background-color: #242424;
   border-radius: 16px;
   padding:16px;
   padding-top:0;

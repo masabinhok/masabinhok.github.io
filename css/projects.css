@@ -120,3 +120,57 @@ poetry */
     text-align: center;
   }
 }
+
+
+/* 
+QUOTES */
+
+.quote-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width:1200px;
+  height:fit-content;
+  margin:50px auto;
+  
+
+
+}
+.quote-head{
+  font-size: 24px;
+  font-weight: 700;
+  padding:16px;
+  text-align: center;
+
+}
+
+.quote-body{
+  font-size:16px;
+  font-weight:500;
+  letter-spacing: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-hidden{
+  color:#a7a7a7;
+  font-size:16px;
+  font-weight:500;
+  letter-spacing: 4px;
+  text-align: center;
+  animation: slideshow 12s  infinite alternate;
+}
+
+
+
+@media screen and (max-width:1200px){
+  .quote-page
+  {
+    margin:20px auto;
+    margin-top:0px;
+    max-width: 400px;
+    padding:16px;
+  }
+}
