@@ -57,6 +57,7 @@
   font-weight: bold;
   text-align: center;
   flex: 1;
+  padding:16px;
 }
 
 @media screen and (max-width: 1200px) {

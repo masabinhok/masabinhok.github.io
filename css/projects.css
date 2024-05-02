@@ -145,20 +145,20 @@ QUOTES */
 }
 
 .quote-body{
-  font-size:16px;
-  font-weight:500;
-  letter-spacing: 4px;
+  font-style: italic;
+  font-size:20px;
+  font-weight:400;
+  font-family: "Cedarville Cursive", cursive;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .quote-hidden{
+  font-style: italic;
+  font-size:20px;
+  font-weight:400;
+  font-family: "Cedarville Cursive", cursive;
+  text-align: center;
   color:#a7a7a7;
-  font-size:16px;
-  font-weight:500;
-  letter-spacing: 4px;
   text-align: center;
   animation: slideshow 12s  infinite alternate;
 }

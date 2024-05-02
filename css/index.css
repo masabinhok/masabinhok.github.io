@@ -30,7 +30,6 @@ body{
   margin: 0;
 }
 
-
 .content {
   width: 100%;
   max-width: 40000px;
@@ -216,14 +215,7 @@ a:hover {
   }
 }
 
-.mode-switch-checkbox {
-  margin-top: -100px;
-}
 
-.mode-switch-button {
-  align-self: center;
-  cursor: pointer;
-}
 
 /* Sidebar CSS */
 .sidebar {
@@ -343,9 +335,32 @@ homepage */
   max-width: 400px;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 1000px;
   cursor: pointer;
+  border-radius:200px;
+  display: none;
 }
+
+
+
+.spirit-dada {
+ 
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius:200px;
+}
+
+.mode-switch-checkbox:checked~ content .humandada{
+  display:block;
+}
+
+.mode-switch-checkbox:checked~ content .spirit-dada{
+  display:none;
+}
+
+
+
 
 .row2 {
   display: flex;
@@ -492,3 +507,66 @@ homepage */
   transform:translateY(-2px);
 
 }
+
+
+/* 
+MODE-SWITCH */
+.dark-mode{
+  position: fixed;
+  top:100px;
+  right:100px;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+
+.moon{
+  width:60px;
+  height:60px;
+  position: relative;
+  display: none;
+}
+.sun{
+  width:60px;
+  height:60px;
+  position: relative;
+  object-fit: cover;
+}
+
+
+.mode-switch-checkbox {
+  margin-top: -100px;
+}
+
+
+.mode-switch-checkbox:checked ~label .sun {
+  display: none;
+}
+
+.mode-switch-checkbox:checked ~label .moon {
+  display: block;
+}
+
+
+
+@media screen and (max-width:600px) {
+  .dark-mode{
+    top:120px;
+    right:40px;
+  }
+  .sun, .moon {
+    width:40px;
+    height:40px;
+  }
+}
+
+
+
+
+
+
+
