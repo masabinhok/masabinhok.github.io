@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <script src="js/script.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sabin Shrestha</title>
@@ -355,7 +357,6 @@ stylesheets -->
                   <textarea
                     name="Send Message"
                     id="message"
-                    id="send-message"
                     placeholder="Would you be willing to share your thoughts?"
                     required
                   ></textarea>
@@ -366,6 +367,7 @@ stylesheets -->
                     type="submit"
                     name="submit"
                     value="Send"
+                    onclick="clearForm();"
                   />
                   <input class="reset-button" type="reset" name="reset" />
                 </div>
