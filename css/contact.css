@@ -71,6 +71,7 @@
   .details{
     align-self: center;
     padding:0;
+    
   }
 
   
@@ -88,8 +89,8 @@ align-items: center;
  
 
   .lets-talk{
-    margin-top:40px;
-    margin-bottom: 100px;
+    margin-top:60px;
+    margin-bottom: 40px;
   }
 }
 
@@ -149,7 +150,7 @@ textarea {
   }
 
   .details {
-    margin-bottom: 24px;
+    padding:8px;
   }
 }
 
