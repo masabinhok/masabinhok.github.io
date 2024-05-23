@@ -1,1 +1,5 @@
-//will learn js and appply. Currently this website is just using HTML and CSS
+const sendButton = document.querySelector(".js-send-button");
+sendButton.addEventListener("click", () => {
+  sendButton.innerHTML = `Sent`;
+  console.log(sendButton.innerHTML);
+});
