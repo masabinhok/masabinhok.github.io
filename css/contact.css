@@ -1,11 +1,10 @@
 .extra-contact {
   font-weight: 700;
   font-size: 24px;
-  margin-bottom:36px;
-  margin-top:36px;
-  align-self:center;
-  padding:16px;
-  
+  margin-bottom: 36px;
+  margin-top: 36px;
+  align-self: center;
+  padding: 16px;
 }
 
 .contact-page {
@@ -14,16 +13,13 @@
   justify-content: center;
   width: 1200px;
   margin-bottom: 100px;
-  gap:50px;
+  gap: 50px;
 }
-
-
 
 .contact-details {
   display: flex;
   flex-direction: column;
   justify-content: start;
-
 }
 
 .lets-talk {
@@ -33,14 +29,10 @@
   color: white;
 }
 
-
-
-
 .details {
   color: white;
-  padding:16px;
-  padding-left:0;
-  
+  padding: 16px;
+  padding-left: 0;
 }
 
 .touch {
@@ -58,38 +50,32 @@
   font-weight: bold;
   text-align: center;
   flex: 1;
-  padding:16px;
+  padding: 16px;
 }
 
 @media screen and (max-width: 1200px) {
   .touch {
     display: none;
-
   }
 
-
-  .details{
+  .details {
     align-self: center;
-    padding:0;
-    
+    padding: 0;
   }
 
-  
-.contact-page {
+  .contact-page {
     width: 300px;
     flex-direction: column;
-align-items: center;
-    gap:0;
+    align-items: center;
+    gap: 0;
   }
-  .extra-contact{
+  .extra-contact {
     margin-top: 40px;
-    margin-bottom:0px;
+    margin-bottom: 0px;
   }
 
- 
-
-  .lets-talk{
-    margin-top:60px;
+  .lets-talk {
+    margin-top: 60px;
     margin-bottom: 40px;
   }
 }
@@ -98,7 +84,6 @@ align-items: center;
 .details {
   font-size: 20px;
   font-weight: bold;
-  
 }
 
 .form-elements {
@@ -125,7 +110,6 @@ textarea {
   border-radius: 8px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   outline: none;
-  
 }
 
 textarea {
@@ -150,7 +134,7 @@ textarea {
   }
 
   .details {
-    padding:8px;
+    padding: 8px;
   }
 }
 
@@ -162,29 +146,28 @@ textarea {
 }
 
 .reset-button {
-  padding: 16px 32px;
+  padding: 12px 32px;
   font-size: 16px;
   margin-top: 16px;
   margin-bottom: 20px;
-  border:none;
+  border: none;
   border-radius: 40px;
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
-  cursor:pointer;
-  font-size:15px;
+  cursor: pointer;
+  font-size: 15px;
   font-weight: 700;
-  color:rgb(12, 12, 12);
+  color: rgb(12, 12, 12);
   background-color: #ffffff;
 }
 
 .reset-button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
-
 }
 
 .submit-button {
-  padding: 16px 32px;
+  padding: 12px 36px;
   font-size: 16px;
   margin-top: 16px;
   margin-bottom: 20px;
@@ -199,12 +182,9 @@ textarea {
   border: none;
 }
 
-
-
 .submit-button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
-
 }
 
 ::placeholder {
@@ -215,8 +195,6 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .email,
 .number,
@@ -240,7 +218,7 @@ textarea {
 .contact-message {
   text-align: center;
   text-align: left;
-  margin-bottom:50px;
+  margin-bottom: 50px;
   color: #a7a7a7;
 }
 
@@ -257,7 +235,6 @@ h3 {
     margin-top: 20px;
   }
 
-
   h3 {
     margin-bottom: 2px;
   }
@@ -271,25 +248,55 @@ h3 {
   }
 }
 
-
-.form{
+.form {
   background-color: #242424;
   border-radius: 16px;
-  padding:16px;
-  padding-top:0;
-  margin-top:16px;
+  padding: 16px;
+  padding-top: 0;
+  margin-top: 16px;
+}
 
+@media screen and (max-width: 1200px) {
+  .form {
+    width: 320px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* 
+form css */
+
+form {
+  margin-top: 24px;
+  background-color: #181818;
+  padding: 16px;
+  border-radius: 16px;
+  align-items: center;
+  font-size: 12px;
+}
+
+form label{
+  font-weight: 600;
+  padding-left:2px;
 }
 
 
+#name,
+#email,
+#message {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 16px 8px;
+}
 
-  
 
-@media screen and (max-width:1200px) {
-  .form{
-    width:320px;
-    padding-left:30px;
-    padding-right:30px;
-    
-  }
+* {
+  box-sizing: border-box;
+}
+
+
+::placeholder{
+  color:gray;
+  font-size:12px;
 }

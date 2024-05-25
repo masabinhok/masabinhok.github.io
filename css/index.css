@@ -24,8 +24,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  padding:0;
+body {
+  padding: 0;
   animation: opacity 1s ease-in;
   margin: 0;
 }
@@ -37,8 +37,6 @@ body{
   transition: background-color 0.15s ease-in;
   transition: color 0.15s ease-in;
   display: flex;
-  
-  
 }
 /* .mode-switch-checkbox{
     
@@ -60,12 +58,11 @@ body{
   transition: color 0.15s ease-in;
 }
 
-.mode-switch-checkbox:checked~ header label{
-  color:black;
- 
-  transition:color 0.15s ease-in;
-}
+.mode-switch-checkbox:checked ~ header label {
+  color: black;
 
+  transition: color 0.15s ease-in;
+}
 
 .mode-switch-checkbox:checked ~ .sidebar {
   background-color: #f4f6f8;
@@ -91,12 +88,12 @@ body{
   transition: color 0.15s ease-in;
 }
 
-.mode-switch-checkbox:checked ~ content .form {
+.mode-switch-checkbox:checked ~ content form {
   background-color: #f4f6f8;
   transition: color 0.15s ease-in;
 }
 
-.mode-switch-checkbox:checked ~content footer {
+.mode-switch-checkbox:checked ~ content footer {
   background-color: #f4f6f8;
   color: black;
   transition: background-color 0.15s ease;
@@ -150,13 +147,12 @@ a:hover {
   transition: color 0.15s ease-in;
 }
 
-@keyframes opacity{
-  0%{
-    opacity:0;
-
+@keyframes opacity {
+  0% {
+    opacity: 0;
   }
-  100%{
-    opacity:1;
+  100% {
+    opacity: 1;
   }
 }
 
@@ -170,13 +166,11 @@ a:hover {
   font-size: 30px;
   margin-left: 1em;
   align-items: center;
-  
 }
 
-.header-image{
-  width:60px;
-  height:60px;
-
+.header-image {
+  width: 60px;
+  height: 60px;
 }
 
 .header2 {
@@ -213,8 +207,6 @@ a:hover {
   }
 }
 
-
-
 /* Sidebar CSS */
 .sidebar {
   background-color: #121212;
@@ -236,12 +228,9 @@ a:hover {
   transition: right 0.5s ease-out;
 }
 
-
-
 .sidebar div {
   font-weight: bold;
   color: rgb(255, 208, 0);
-
 }
 
 .sidebar div:hover {
@@ -281,8 +270,6 @@ a:hover {
     display: none;
   }
 }
-
-
 
 /* 
 homepage */
@@ -324,41 +311,32 @@ homepage */
   align-items: center;
   justify-content: center;
   flex: 1;
-  
 }
-
-
 
 .humandada {
   max-width: 400px;
   max-height: 400px;
   object-fit: cover;
   cursor: pointer;
-  border-radius:200px;
+  border-radius: 200px;
   display: none;
 }
 
-
-
 .spirit-dada {
- 
   max-width: 400px;
   max-height: 400px;
   object-fit: cover;
   cursor: pointer;
-  border-radius:200px;
+  border-radius: 200px;
 }
 
-.mode-switch-checkbox:checked~ content .humandada{
-  display:block;
+.mode-switch-checkbox:checked ~ content .humandada {
+  display: block;
 }
 
-.mode-switch-checkbox:checked~ content .spirit-dada{
-  display:none;
+.mode-switch-checkbox:checked ~ content .spirit-dada {
+  display: none;
 }
-
-
-
 
 .row2 {
   display: flex;
@@ -443,13 +421,12 @@ homepage */
   .i-hi {
     margin-top: 0px;
     font-size: 20px;
-    font-weight:500;
+    font-weight: 500;
   }
 
   .i-name {
     font-size: 22px;
     font-weight: 700;
-    
   }
 
   .i-slogan {
@@ -482,88 +459,74 @@ homepage */
   box-sizing: border-box;
 }
 
-.hire-me-button{
-  width:180px;
-  padding:10px 36px;
-  margin-top:8px;
-  
-  height:48px;
+.hire-me-button {
+  width: 180px;
+  padding: 10px 36px;
+  margin-top: 8px;
+
+  height: 48px;
   border-radius: 40px;
-  border:none;
+  border: none;
   box-sizing: border-box;
-  padding:12px;
+  padding: 12px;
   font-family: "Nunito Sans", sans-serif;
-  cursor:pointer;
-  font-size:15px;
+  cursor: pointer;
+  font-size: 15px;
   font-weight: 700;
-  color:rgb(12, 12, 12);
+  color: rgb(12, 12, 12);
   background-color: #f6e05e;
-
 }
-.hire-me-button:hover{
-  opacity:0.75;
-  transform:translateY(-2px);
-
+.hire-me-button:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
 }
-
 
 /* 
 MODE-SWITCH */
-.dark-mode{
+.dark-mode {
   position: fixed;
-  top:100px;
-  right:100px;
-  border-radius:50%;
-  width:60px;
-  height:60px;
+  top: 100px;
+  right: 100px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   z-index: 1000;
   cursor: pointer;
 }
 
-
-
-.moon{
-  width:60px;
-  height:60px;
+.moon {
+  width: 60px;
+  height: 60px;
   position: relative;
   display: none;
 }
-.sun{
-  width:60px;
-  height:60px;
+.sun {
+  width: 60px;
+  height: 60px;
   position: relative;
   object-fit: cover;
 }
-
 
 .mode-switch-checkbox {
   margin-top: -100px;
 }
 
-
-.mode-switch-checkbox:checked ~label .sun {
+.mode-switch-checkbox:checked ~ label .sun {
   display: none;
 }
 
-.mode-switch-checkbox:checked ~label .moon {
+.mode-switch-checkbox:checked ~ label .moon {
   display: block;
 }
 
-
-
-@media screen and (max-width:600px) {
-  .dark-mode{
-    top:120px;
-    right:40px;
+@media screen and (max-width: 600px) {
+  .dark-mode {
+    top: 120px;
+    right: 40px;
   }
-  .sun, .moon {
-    width:40px;
-    height:40px;
+  .sun,
+  .moon {
+    width: 40px;
+    height: 40px;
   }
 }
-
-
-
-
-
-
