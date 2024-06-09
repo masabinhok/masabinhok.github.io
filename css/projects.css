@@ -162,3 +162,23 @@ QUOTES */
     padding: 16px;
   }
 }
+
+
+.logo-name {
+  font-size: 80px;
+  font-weight: 700;
+  color: rgb(226, 57, 57);
+  background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: saturateAnimation 5s linear infinite alternate;
+}
+
+@keyframes saturateAnimation {
+  0% {
+    filter: saturate(0%);
+  }
+  100% {
+    filter: saturate(200%);
+  }
+}

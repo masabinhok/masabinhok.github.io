@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- nunito font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <!-- montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- mukta font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="aagoType.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>आगोTYPE</title>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <div class="header-logo">
+          <div class="logo-name">आगोtype</div>
+          <div class="logo-slogan">Burn the keys, आगो लगाइदेउ ।</div>
+        </div>
+      </header>
+      <main>
+        <div class="container-head">
+          <div class="timer"></div>
+          <div class="english">English/QWERTY</div>
+          <button class="new-game">NEW GAME</button>
+        </div>
+        <div id="game" tabindex="0">
+          <div id="words"></div>
+          <div id="cursor">|</div>
+          <div id="focus-error">Click here to focus.</div>
+        </div>
+        <div class="container-foot">
+          <div class="wpm">WPM</div>
+          <div class="message">Enter to Restart</div>
+        </div>
+      </main>
+      <aside>
+        <div class="timer-input">
+          <button class="fifteen">15</button>
+          <button class="thirty">30</button>
+          <button class="fourty-five">45</button>
+          <button class="sixty">60</button>
+        </div>
+      </aside>
+      <footer>
+        <h1 class="footer-credit">SABIN श्रेष्ठ !</h1>
+        <p class="footer-slogan">WHAT AM I, AN ART OR AN ARTIST ?</p>
+        <p class="copyright">© 2024. All rights reserved.</p>
+        <p>JavaScript</p>
+        <div class="feedback">
+          <h1>FEEDBACK</h1>
+          <p>Any suggestions would be highly appreciated!</p>
+          <form action="https://formspree.io/f/mayraqjn" method="post">
+            <textarea name="feedback" id="feedback">
+            </textarea>
+            <button  name="submit" class="submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </footer>
+    </div>
+   
+
+    <script type="module" src="scripts/aagoType.js"></script>
+  </body>
+</html>
