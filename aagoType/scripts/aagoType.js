@@ -6,6 +6,13 @@ window.timer = null;
 window.gameStart = null;
 let gameOverCalled = false; // Flag to track if gameOver is called
 
+
+
+
+setTimeout(()=>{
+
+},4000)
+
 //timing-buttons
 const fifteen = document.querySelector(".fifteen");
 const thirty = document.querySelector(".thirty");
