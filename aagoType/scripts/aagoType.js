@@ -1,35 +1,41 @@
 import { words } from "./data.js";
 
 const wordCount = words.length;
-let gameTime = 14 * 1000;
+let gameTime = localStorage.getItem("time") || 14 * 1000;
 window.timer = null;
 window.gameStart = null;
+let gameOverCalled = false; // Flag to track if gameOver is called
 
 //timing-buttons
 const fifteen = document.querySelector(".fifteen");
 const thirty = document.querySelector(".thirty");
-const fortyfive = document.querySelector(".fourty-five");
+const fortyfive = document.querySelector(".forty-five");
 const sixty = document.querySelector(".sixty");
+
+function saveTostorage() {
+  localStorage.setItem("time", gameTime);
+}
 
 fifteen.addEventListener("click", () => {
   gameTime = 14 * 1000;
-  hideTimerInput();
+
+  saveTostorage();
   newGame();
 });
 
 thirty.addEventListener("click", () => {
   gameTime = 29 * 1000;
-  hideTimerInput();
+  saveTostorage();
   newGame();
 });
 fortyfive.addEventListener("click", () => {
   gameTime = 44 * 1000;
-  hideTimerInput();
+  saveTostorage();
   newGame();
 });
 sixty.addEventListener("click", () => {
   gameTime = 59 * 1000;
-  hideTimerInput();
+  saveTostorage();
   newGame();
 });
 
@@ -64,8 +70,9 @@ function newGame() {
   document.querySelector(".word").classList.add("current");
   document.querySelector(".letter").classList.add("current");
   document.querySelector(".timer").innerHTML = gameTime / 1000 + 1 + " ";
-  clearTimeout(window.timer);
+  clearInterval(window.timer);
   window.timer = null;
+  gameOverCalled = false; // Reset the flag for a new game
 }
 
 //
@@ -95,48 +102,59 @@ function hideTimerInput() {
 }
 
 //game over
+// Function to handle the end of the game
 function gameOver() {
-  hideTimerInput();
-  clearTimeout(window.timer);
-  addClass(document.getElementById("game"), "over");
-  addClass(document.querySelector(".message"), "nepali");
-  const wpm = getWpm();
-  document.querySelector(".wpm").innerHTML = `WPM ${wpm}`;
+  if (gameOverCalled) return; // Prevent multiple calls
+  gameOverCalled = true; // Set the flag
+
+  hideTimerInput(); // Hide the timer input
+  clearInterval(window.timer); // Clear the game timer
+
+  const wpm = getWpm(); // Get the Words Per Minute (WPM) score
+  document.querySelector(".wpm").innerHTML = `WPM ${wpm}`; // Display WPM score
+
+  // Determine the message based on WPM score
+  let message = "";
   if (wpm >= 0 && wpm < 10) {
-    document.querySelector(".message").innerHTML = "एउटा झिल्का पनि छैन।";
+    message = "एउटा झिल्का पनि छैन।";
   } else if (wpm >= 10 && wpm < 20) {
-    document.querySelector(".message").innerHTML =
-      "झिल्का छरिँदै छन्, अझै बल्नुछ!";
+    message = "झिल्का छरिँदै छन्, अझै बल्नुछ!";
   } else if (wpm >= 20 && wpm < 30) {
-    document.querySelector(".message").innerHTML = "यो त धुवाँ मात्रै हो!";
+    message = "यो त धुवाँ मात्रै हो!";
   } else if (wpm >= 30 && wpm < 40) {
-    document.querySelector(".message").innerHTML = "अब तातिन थाल्यो।";
+    message = "अब तातिन थाल्यो।";
   } else if (wpm >= 40 && wpm < 50) {
-    document.querySelector(".message").innerHTML = "आगो छ त!";
+    message = "आगो छ त!";
   } else if (wpm >= 50 && wpm < 60) {
-    document.querySelector(".message").innerHTML =
-      "आगो बल्दै छ, अझ राम्रो गरौं!";
+    message = "आगो बल्दै छ, अझ राम्रो गरौं!";
   } else if (wpm >= 60 && wpm < 70) {
-    document.querySelector(".message").innerHTML =
-      "आगो त राम्रो बल्दैछ, गजबको काम!";
+    message = "आगो त राम्रो बल्दैछ, गजबको काम!";
   } else if (wpm >= 70 && wpm < 80) {
-    document.querySelector(".message").innerHTML =
-      "लप्का उचाल्दैछन्, उत्कृष्ट!";
+    message = "लप्का उचाल्दैछन्, उत्कृष्ट!";
   } else if (wpm >= 80 && wpm < 90) {
-    document.querySelector(".message").innerHTML =
-      "आगोको राप गज्जबको छ, उत्कृष्ट!";
+    message = "आगोको राप गज्जबको छ, उत्कृष्ट!";
   } else if (wpm >= 90 && wpm < 100) {
-    document.querySelector(".message").innerHTML =
-      "तिमी त झिल्काहरुको जादुगर नै भयौ!";
+    message = "तिमी त झिल्काहरुको जादुगर नै भयौ!";
   } else if (wpm >= 100) {
-    document.querySelector(".message").innerHTML =
-      "तिमी त आगोको मास्टर नै भयौ!";
+    message = "तिमी त आगोको मास्टर नै भयौ!";
   }
 
-  document.querySelector(".wpm").classList.add("over");
+  document.querySelector(".message").innerHTML = message; // Display the message
+
+  // Add 'over' class to the game element if not already present
+  const gameElement = document.getElementById("game");
+  if (!gameElement.classList.contains("over")) {
+    gameElement.classList.add("over");
+  }
+
+  // Add 'nepali' class to the message box if not already present
+  const messageBox = document.querySelector(".message-box");
+  if (!messageBox.classList.contains("nepali")) {
+    messageBox.classList.add("nepali");
+  }
 }
 
-//
+// Event listener for game input
 document.getElementById("game").addEventListener("keyup", (ev) => {
   const key = ev.key;
   const currentWord = document.querySelector(".word.current");
@@ -145,6 +163,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
   const isLetter = key.length === 1 && key !== " ";
   const isSpace = key === " ";
   const isBackspace = key === "Backspace";
+  const isExtraLetter = document.querySelector(".extra");
   const isFirstLetter = currentWord.firstElementChild === currentLetter;
 
   if (document.querySelector("#game.over")) {
@@ -163,11 +182,14 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
       if (!window.gameStart) {
         window.gameStart = new Date().getTime();
       }
+
       const currentTime = new Date().getTime();
-      const msPassed = gameStart - currentTime; //1000ms
-      const sPassed = Math.round(msPassed / 1000); //1s
-      const sLeft = gameTime / 1000 + sPassed; //14s
+      const msPassed = currentTime - window.gameStart; // Corrected calculation
+      const sPassed = Math.round(msPassed / 1000); // Corrected to use msPassed
+      const sLeft = Math.round(gameTime / 1000 - sPassed); // Corrected to subtract
+
       if (sLeft <= 0) {
+        clearInterval(window.timer);
         document.querySelector(".timer").innerHTML = "समय सकियो!";
         gameOver();
         return;
@@ -194,7 +216,6 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
   }
 
   //space button
-
   if (isSpace) {
     if (expected !== " ") {
       const lettersToInvalidate = [
@@ -213,7 +234,12 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
     addClass(currentWord.nextSibling.firstElementChild, "current");
   }
 
+  //backspace button
   if (isBackspace) {
+    if (isExtraLetter) {
+      isExtraLetter.remove();
+    }
+
     if (currentLetter && isFirstLetter) {
       removeClass(currentWord, "current");
       addClass(currentWord.previousElementSibling, "current");
@@ -228,6 +254,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
         "correct"
       );
     }
+
     if (currentLetter && !isFirstLetter) {
       removeClass(currentLetter, "current");
       addClass(currentLetter.previousElementSibling, "current");
@@ -273,12 +300,6 @@ document.querySelector(".new-game").addEventListener("click", () => {
 document.addEventListener("keydown", (ev) => {
   if (ev.key === "Enter") {
     location.reload();
-  }
-});
-
-document.addEventListener("keydown", (ev) => {
-  if (ev.key === " ") {
-    ev.prevent.default();
   }
 });
 
