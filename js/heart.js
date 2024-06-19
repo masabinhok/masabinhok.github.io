@@ -1,7 +1,7 @@
 export default function heart() {
   const bodyEl = document.querySelector("body");
   const heartPool = [];
-  const poolSize = 20;
+  const poolSize = 3;
 
   for (let i = 0; i < poolSize; i++) {
     const spanEl = document.createElement("span");
@@ -18,6 +18,17 @@ export default function heart() {
   let currentHeart = 0;
 
   bodyEl.addEventListener("mousemove", (event) => {
+    generateHeart();
+  });
+
+  bodyEl.addEventListener("click", (event) => {
+    generateHeart();
+  });
+
+  
+
+
+  function generateHeart() {
     const { pageX, pageY } = event; // Use pageX and pageY instead of clientX and clientY
     const heartEl = heartPool[currentHeart];
 
@@ -36,5 +47,5 @@ export default function heart() {
     heartEl.style.animation = "heart 2s linear";
 
     currentHeart = (currentHeart + 1) % poolSize;
-  });
+  }
 }
