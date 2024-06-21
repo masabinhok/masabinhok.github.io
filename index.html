@@ -304,26 +304,21 @@ stylesheets -->
             
             <div class="inquiry">LET'S HAVE A CONVO,</div>
             <form action="https://formspree.io/f/mayraqjn" method="post">
-              <label class="form-name" for="name">
-                Name
-              </label>
-              <input id="name" type="text" placeholder="What shall i call you in my world?" required>
-              <label class="form-email" for="email">
-                Email
-              </label>
-              <input id="email" placeholder="Your email" type="email" required>
+              <label class="form-name" for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="What shall I call you in my world?" required>
+          
+              <label class="form-email" for="email">Email</label>
+              <input name="email" id="email" placeholder="Your email" type="email" required>
+          
               <label for="message" class="form-message">Message</label>
-              <textarea id="message" placeholder="Write to me!" rows="10" ></textarea>
+              <textarea id="message" name="message" placeholder="Write to me!" rows="10" required></textarea>
+          
               <div class="buttons">
-                <input
-                  class="js-send-button submit-button"
-                  type="submit"
-                  name="submit"
-                  value="Send"
-                />
-                <input class="reset-button" type="reset" name="reset" />
+                  <button class="js-send-button submit-button" type="submit" name="send">Send</button>
+                  <button class="reset-button" type="reset" name="reset">Reset</button>
               </div>
-            </form>
+          </form>
+          
 
 
           </div>
