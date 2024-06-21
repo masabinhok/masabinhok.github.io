@@ -26,9 +26,10 @@
 }
 
 .project-box {
-  width: 80px;
-  height: 100px;
-  background-color: #242424;
+  background-image: url('img/silent.png');
+  margin-top:40px;
+  width: 300px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,9 +37,17 @@
   cursor: pointer;
   font-weight: 800;
   font-size: 24px;
+  border:white 1px solid;
+
 }
 
-#one {
+.aagotype {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* #one {
   animation: chamelion 1s 0.2s infinite alternate;
 }
 #two {
@@ -69,7 +78,7 @@
     background-color: #121212;
     color: #ffffff;
   }
-}
+} */
 
 .project-note {
   text-align: center;
